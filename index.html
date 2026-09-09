@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>South Florida Jewish Relocation Advisors — From First Thought to Mezuzah on Your Door</title>
+    <meta name="robots" content="noindex, nofollow">
     <meta name="description" content="Real estate and relocation guidance for families moving to South Florida. From finding the right home near the places that matter to you, to schools, community connections, professional services and settling in.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -528,6 +529,97 @@
             line-height: 1.4;
         }
 
+        /* ===== ABOUT ===== */
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 48px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .about-card { text-align: center; }
+        .about-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 4px solid var(--blue-light);
+        }
+        .about-photo-placeholder {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: var(--blue-light);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .about-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            color: var(--blue);
+            margin-bottom: 6px;
+        }
+        .about-title {
+            font-size: 13px;
+            color: var(--gold);
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+        .about-card > p:last-child {
+            font-size: 14px;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* ===== FORM ===== */
+        .relocation-form { }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+        .form-group { display: flex; flex-direction: column; }
+        .form-group.full { margin-bottom: 16px; }
+        .form-group label {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text);
+            margin-bottom: 6px;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            padding: 12px 14px;
+            border: 1px solid rgba(0,61,165,0.15);
+            border-radius: 8px;
+            font-size: 15px;
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            background: var(--white);
+            transition: border-color 0.2s;
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--blue);
+        }
+        .checkbox-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+        .checkbox-label {
+            font-size: 14px !important;
+            font-weight: 400 !important;
+            color: var(--text-light) !important;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+        .checkbox-label input { width: 16px; height: 16px; }
+
         /* ===== MOBILE ===== */
         @media (max-width: 768px) {
             .nav-links { display: none; }
@@ -551,6 +643,9 @@
             .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
             .stat-number { font-size: 36px; }
             .areas-grid { grid-template-columns: 1fr; }
+            .about-grid { grid-template-columns: 1fr; gap: 32px; }
+            .form-row { grid-template-columns: 1fr; }
+            .checkbox-grid { grid-template-columns: 1fr; }
             .area-card { height: 220px; }
             .steps { grid-template-columns: 1fr; gap: 32px; }
             .testimonials-grid { grid-template-columns: 1fr; }
@@ -692,6 +787,13 @@
             </div>
             <div class="areas-grid">
                 <div class="area-card">
+                    <div class="area-card-bg" style="background: linear-gradient(135deg, #1a5f7a 0%, #2a8fb5 100%);"></div>
+                    <div class="area-card-overlay">
+                        <h3>Miami Beach</h3>
+                        <p>Historic community, walkable neighborhoods, culture, dining and a broad selection of properties.</p>
+                    </div>
+                </div>
+                <div class="area-card">
                     <div class="area-card-bg" style="background: linear-gradient(135deg, #003DA5 0%, #1a6fb5 100%);"></div>
                     <div class="area-card-overlay">
                         <h3>Surfside, Bal Harbour & Bay Harbor Islands</h3>
@@ -699,7 +801,7 @@
                     </div>
                 </div>
                 <div class="area-card">
-                    <div class="area-card-bg" style="background: linear-gradient(135deg, #1a5f7a 0%, #2a8fb5 100%);"></div>
+                    <div class="area-card-bg" style="background: linear-gradient(135deg, #1a6f8a 0%, #3a9fc5 100%);"></div>
                     <div class="area-card-overlay">
                         <h3>Sunny Isles Beach</h3>
                         <p>Oceanfront living with a growing international community and modern high-rise developments.</p>
@@ -710,6 +812,13 @@
                     <div class="area-card-overlay">
                         <h3>Aventura</h3>
                         <p>Family-oriented suburban setting with excellent schools and convenient access to community institutions.</p>
+                    </div>
+                </div>
+                <div class="area-card">
+                    <div class="area-card-bg" style="background: linear-gradient(135deg, #2d4a5a 0%, #4a7a8b 100%);"></div>
+                    <div class="area-card-overlay">
+                        <h3>North Miami Beach</h3>
+                        <p>Accessible community with diverse housing options and growing neighborhood resources.</p>
                     </div>
                 </div>
                 <div class="area-card">
@@ -729,8 +838,8 @@
                 <div class="area-card">
                     <div class="area-card-bg" style="background: linear-gradient(135deg, #4a2d5a 0%, #7a5a8b 100%);"></div>
                     <div class="area-card-overlay">
-                        <h3>Miami Beach</h3>
-                        <p>Historic community, walkable neighborhoods, culture, dining and a broad selection of properties.</p>
+                        <h3>Palm Beach & West Palm Beach</h3>
+                        <p>Upscale coastal living with established communities, cultural institutions and prestigious neighborhoods.</p>
                     </div>
                 </div>
             </div>
@@ -786,8 +895,126 @@
         </div>
     </section>
 
+    <!-- ABOUT US -->
+    <section class="section" id="about">
+        <div class="section-inner">
+            <div class="section-header">
+                <h2>About Us</h2>
+                <p>South Florida Jewish Relocation Advisors is a specialized relocation and real estate service designed to help individuals and families navigate a move to South Florida.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <img src="alex.jpg" alt="Alexander Adamov" class="about-photo">
+                    <h3>Alexander Adamov</h3>
+                    <p class="about-title">Licensed Real Estate Agent, FL# SL3624624</p>
+                    <p>Specializing in residential and commercial real estate across South Florida. Experienced working with international buyers and relocating families from Canada, Israel, Europe and Latin America. Fluent in English, Russian and Ukrainian.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-photo about-photo-placeholder"></div>
+                    <h3>Anat Askrabic</h3>
+                    <p class="about-title">Licensed Real Estate Agent</p>
+                    <p>Dedicated to helping families find their ideal home in South Florida, with a focus on understanding each client's unique relocation needs and community requirements.</p>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 32px; font-size: 13px; color: var(--text-muted);">Real estate services provided through Trybal Group LLC, a Florida-licensed brokerage.</p>
+        </div>
+    </section>
+
+    <!-- PLAN YOUR MOVE FORM -->
+    <section class="section" id="contact" style="background: var(--cream);">
+        <div class="section-inner" style="max-width: 720px;">
+            <div class="section-header">
+                <h2>Plan Your Move</h2>
+                <p>Tell us about your relocation plans. No obligation — just a conversation about what South Florida could look like for your family.</p>
+            </div>
+            <form class="relocation-form" action="mailto:adamov.real@gmail.com" method="POST" enctype="text/plain">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Name *</label>
+                        <input type="text" name="name" required placeholder="Your full name">
+                    </div>
+                    <div class="form-group">
+                        <label>Email *</label>
+                        <input type="email" name="email" required placeholder="your@email.com">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Phone / WhatsApp</label>
+                        <input type="tel" name="phone" placeholder="+1 (XXX) XXX-XXXX">
+                    </div>
+                    <div class="form-group">
+                        <label>Where are you moving from?</label>
+                        <input type="text" name="origin" placeholder="City, State/Province, Country">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Expected move date</label>
+                        <input type="text" name="move_date" placeholder="e.g. Spring 2027, ASAP, Not sure">
+                    </div>
+                    <div class="form-group">
+                        <label>Buy / Rent / Not Sure</label>
+                        <select name="transaction_type">
+                            <option value="">Select...</option>
+                            <option value="buy">Buy</option>
+                            <option value="rent">Rent</option>
+                            <option value="both">Both / Not sure</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Budget range</label>
+                        <input type="text" name="budget" placeholder="e.g. $500K–$800K or $4K–$6K/mo">
+                    </div>
+                    <div class="form-group">
+                        <label>Bedrooms / Property type</label>
+                        <input type="text" name="property" placeholder="e.g. 3BR condo, Single family home">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Adults</label>
+                        <input type="number" name="adults" min="1" placeholder="Number of adults">
+                    </div>
+                    <div class="form-group">
+                        <label>Children &amp; ages</label>
+                        <input type="text" name="children" placeholder="e.g. 2 children (ages 5, 8)">
+                    </div>
+                </div>
+                <div class="form-group full">
+                    <label>Preferred areas</label>
+                    <input type="text" name="areas" placeholder="e.g. Aventura, Boca Raton, Surfside — or Not sure yet">
+                </div>
+                <div class="form-group full">
+                    <label>Is there a specific synagogue, school, workplace or other destination you'd like to be near?</label>
+                    <input type="text" name="proximity" placeholder="e.g. BRS Boca Raton, Scheck Hillel, specific workplace">
+                </div>
+                <div class="form-group full">
+                    <label>Services needed</label>
+                    <div class="checkbox-grid">
+                        <label class="checkbox-label"><input type="checkbox" name="svc_home" value="1"> Home Search</label>
+                        <label class="checkbox-label"><input type="checkbox" name="svc_schools" value="1"> Schools</label>
+                        <label class="checkbox-label"><input type="checkbox" name="svc_community" value="1"> Synagogue / Community</label>
+                        <label class="checkbox-label"><input type="checkbox" name="svc_mortgage" value="1"> Mortgage / Financing</label>
+                        <label class="checkbox-label"><input type="checkbox" name="svc_immigration" value="1"> Immigration</label>
+                        <label class="checkbox-label"><input type="checkbox" name="svc_business" value="1"> Business / Commercial</label>
+                        <label class="checkbox-label"><input type="checkbox" name="svc_moving" value="1"> Moving / Logistics</label>
+                        <label class="checkbox-label"><input type="checkbox" name="svc_renovation" value="1"> Home Setup / Renovation</label>
+                    </div>
+                </div>
+                <div class="form-group full">
+                    <label>Additional information</label>
+                    <textarea name="additional" rows="4" placeholder="Anything else you'd like us to know about your move..."></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%; text-align: center; border: none; cursor: pointer; font-size: 17px;">Start Planning Your Move</button>
+            </form>
+        </div>
+    </section>
+
     <!-- BOTTOM CTA -->
-    <section class="cta-section" id="contact">
+    <section class="cta-section">
         <div class="section-inner">
             <h2>Ready to Start Planning Your Move?</h2>
             <p>Whether you're six months away or still exploring, we're happy to talk through your options. No pressure, no obligation — just a conversation about what South Florida could look like for your family.</p>
@@ -801,39 +1028,22 @@
     <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-inner">
-            <div class="footer-top">
-                <div class="footer-brand">
-                    <h3>South Florida Jewish Relocation Advisors</h3>
-                    <p class="tagline">From First Thought to Mezuzah on Your Door</p>
-                    <p>Real estate and relocation guidance for families moving to South Florida.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Services</h4>
-                    <a href="#services">Relocation Services</a>
-                    <a href="#real-estate">Real Estate</a>
-                    <a href="#areas">Areas</a>
-                    <a href="#why-florida">Why South Florida</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact</h4>
-                    <a href="tel:+17866951465">+1 786-695-1465</a>
-                    <a href="mailto:adamov.real@gmail.com">adamov.real@gmail.com</a>
-                    <a href="#about">About Us</a>
-                </div>
+            <div style="text-align: center; margin-bottom: 20px;">
+                <h3 style="font-family: 'Playfair Display', serif; color: var(--white); font-size: 18px; margin-bottom: 4px;">South Florida Jewish Relocation Advisors</h3>
+                <p style="color: var(--gold); font-style: italic; font-size: 13px; margin-bottom: 16px;">From First Thought to Mezuzah on Your Door</p>
+                <p>Trybal Group LLC | Miami, FL</p>
+                <p style="margin-top: 8px;"><a href="tel:+17866951465" style="color: rgba(255,255,255,0.8); text-decoration: none;">+1 786-695-1465</a> · <a href="mailto:adamov.real@gmail.com" style="color: rgba(255,255,255,0.8); text-decoration: none;">adamov.real@gmail.com</a></p>
             </div>
             <hr class="footer-divider">
-            <div class="footer-bottom">
-                <div class="footer-legal">
-                    <p>South Florida Jewish Relocation Advisors<br>Real estate services provided through Trybal Group LLC, 55 SW 9th St, Unit 4506, Miami, FL 33130</p>
-                    <p>Alexander Adamov — Licensed Real Estate Agent, FL# SL3624624<br>Anat Askrabic — Licensed Real Estate Agent</p>
-                    <p style="margin-top: 16px; font-size: 11px; line-height: 1.6; opacity: 0.7;">Our services are available to clients of all backgrounds. We do not recommend properties or neighborhoods based on race, religion, national origin or any other protected class. All property searches are conducted based on objective criteria specified by the client, including budget, property characteristics, commute requirements and proximity to specific destinations.</p>
-                </div>
-                <div class="footer-badges">
-                    <div class="footer-badge">Fair<br>Housing</div>
-                    <div class="footer-badge">Equal Housing<br>Opportunity</div>
-                </div>
+            <div style="text-align: center; display: flex; justify-content: center; gap: 24px; margin-bottom: 16px;">
+                <div class="footer-badge">Fair Housing</div>
+                <div class="footer-badge">Equal Opportunity</div>
+                <a href="#" class="footer-badge" style="text-decoration: none; color: rgba(255,255,255,0.7);" onclick="document.getElementById('disclaimer').style.display=document.getElementById('disclaimer').style.display==='none'?'block':'none'; return false;">Fair Housing Disclaimer ▸</a>
             </div>
-            <p style="text-align: center; margin-top: 32px; font-size: 11px; opacity: 0.4;">© 2026 South Florida Jewish Relocation Advisors. All rights reserved.</p>
+            <div id="disclaimer" style="display: none; max-width: 700px; margin: 0 auto 16px; text-align: center; font-size: 11px; line-height: 1.6; opacity: 0.7;">
+                Our services are available to clients of all backgrounds. We do not recommend properties or neighborhoods based on race, religion, national origin or any other protected class. All property searches are conducted based on objective criteria specified by the client, including budget, property characteristics, commute requirements and proximity to specific destinations.
+            </div>
+            <p style="text-align: center; font-size: 11px; opacity: 0.4;">© 2026 South Florida Jewish Relocation Advisors</p>
         </div>
     </footer>
 
