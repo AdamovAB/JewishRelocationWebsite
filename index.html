@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>South Florida Jewish Relocation Advisors — From First Thought to Mezuzah on Your Door</title>
-    <meta name="description" content="Real estate and relocation guidance for families moving to South Florida. From finding the right home near the places that matter to you, to schools, community connections, professional services and settling in.">
+    <meta name="description" content="Real estate and relocation guidance for Jewish families moving to South Florida. From finding the right home near your synagogue, to schools, community connections, professional services and settling in.">
     <meta name="robots" content="noindex, nofollow">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +23,7 @@
             --text: #1A1A1A;
             --text-light: #4A5568;
             --text-muted: #8A95A8;
-            --border: rgba(12,35,64,0.06);
+            --border: rgba(12,35,64,0.08);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -36,14 +36,12 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        h1, h2, h3, h4 {
-            font-family: 'Cormorant Garamond', Georgia, serif;
-        }
+        h1, h2, h3, h4 { font-family: 'Cormorant Garamond', Georgia, serif; }
 
         /* ===== NAV ===== */
         .nav {
             position: fixed; top: 0; width: 100%;
-            background: rgba(255,255,255,0.96);
+            background: rgba(255,255,255,0.97);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border);
             z-index: 100; padding: 0 24px;
@@ -53,17 +51,25 @@
             display: flex; align-items: center; justify-content: space-between;
             height: 72px;
         }
-        .nav-logo { text-decoration: none; }
+        .nav-logo {
+            text-decoration: none;
+            display: flex; align-items: center; gap: 12px;
+        }
+        .nav-logo-icon {
+            width: 36px; height: 36px; flex-shrink: 0;
+        }
+        .nav-logo-icon svg { width: 100%; height: 100%; }
+        .nav-logo-text-wrap { line-height: 1.15; }
         .nav-logo-text {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 18px; font-weight: 600;
-            color: var(--blue); line-height: 1.2;
+            font-size: 15px; font-weight: 600;
+            color: var(--blue);
         }
         .nav-logo-sub {
             font-family: 'Inter', sans-serif;
-            font-size: 9px; font-weight: 500;
-            color: var(--gold); letter-spacing: 2px;
-            text-transform: uppercase; margin-top: 1px;
+            font-size: 8px; font-weight: 500;
+            color: var(--gold); letter-spacing: 1.5px;
+            text-transform: uppercase;
         }
         .nav-links {
             display: flex; align-items: center; gap: 28px; list-style: none;
@@ -98,19 +104,32 @@
             content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
             background: linear-gradient(135deg, rgba(12,35,64,1) 0%, rgba(27,58,92,0.95) 50%, rgba(44,95,138,0.9) 100%);
         }
+        /* Decorative Star of David watermark */
+        .hero::after {
+            content: '✡'; position: absolute;
+            right: -60px; top: 50%; transform: translateY(-50%);
+            font-size: 400px; color: rgba(184,146,74,0.04);
+            z-index: 0; pointer-events: none;
+        }
         .hero-inner {
             max-width: 800px; margin: 0 auto;
             text-align: center; position: relative; z-index: 1;
         }
+        .hero-star {
+            width: 40px; height: 40px; margin: 0 auto 20px; opacity: 0.5;
+        }
+        .hero-star svg { width: 100%; height: 100%; }
         .hero-tagline {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 15px; color: var(--gold);
+            font-size: 16px; color: var(--gold);
             font-style: italic; letter-spacing: 1px;
-            margin-bottom: 24px;
+            margin-bottom: 28px;
+            display: flex; align-items: center; justify-content: center; gap: 12px;
         }
+        .hero-tagline .mezuzah-icon { width: 14px; height: 28px; opacity: 0.7; }
         .hero h1 {
             font-size: 52px; font-weight: 500;
-            color: var(--white); line-height: 1.15;
+            color: var(--white); line-height: 1.25;
             margin-bottom: 28px; letter-spacing: -0.5px;
         }
         .hero-sub {
@@ -120,7 +139,6 @@
         }
         .hero-buttons {
             display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
-            margin-bottom: 48px;
         }
         .btn-primary {
             background: var(--gold); color: var(--blue);
@@ -140,13 +158,6 @@
             transition: border-color 0.2s;
         }
         .btn-secondary:hover { border-color: rgba(255,255,255,0.5); }
-        .hero-brokerage {
-            font-size: 11px; color: rgba(255,255,255,0.35);
-        }
-        .hero-divider {
-            width: 60px; height: 1px;
-            background: var(--gold); margin: 0 auto 24px; opacity: 0.5;
-        }
 
         /* ===== SECTIONS ===== */
         .section { padding: 100px 24px; }
@@ -166,28 +177,43 @@
             color: var(--gold); letter-spacing: 2.5px;
             text-transform: uppercase; margin-bottom: 16px;
         }
+        .section-star {
+            width: 24px; height: 24px; margin: 0 auto 16px; opacity: 0.3;
+        }
+        .section-star svg { width: 100%; height: 100%; }
 
-        /* ===== SERVICE CARDS ===== */
-        .cards-grid {
-            display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
-            background: var(--border); border: 1px solid var(--border);
+        /* ===== SERVICES ===== */
+        .services-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
         }
-        .card {
-            background: var(--white); padding: 40px 32px;
-            transition: background 0.3s;
+        .service-category {
+            background: var(--white); padding: 36px 28px;
+            border: 1px solid var(--border); border-radius: 4px;
+            transition: border-color 0.3s;
         }
-        .card:hover { background: var(--cream); }
-        .card-icon {
-            width: 48px; height: 48px; margin-bottom: 24px;
-            display: flex; align-items: center; justify-content: center;
-        }
-        .card-icon svg { width: 32px; height: 32px; stroke: var(--gold); fill: none; stroke-width: 1.5; }
-        .card h3 {
+        .service-category:hover { border-color: var(--gold); }
+        .service-category h3 {
             font-size: 22px; font-weight: 500;
-            color: var(--blue); margin-bottom: 12px;
+            color: var(--blue); margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--gold-subtle);
         }
-        .card p {
-            font-size: 14px; color: var(--text-light); line-height: 1.7;
+        .service-category ul {
+            list-style: none; padding: 0;
+        }
+        .service-category li {
+            font-size: 14px; color: var(--text-light); line-height: 1.5;
+            padding: 6px 0 6px 18px;
+            position: relative;
+        }
+        .service-category li::before {
+            content: ''; position: absolute; left: 0; top: 13px;
+            width: 6px; height: 6px; border-radius: 50%;
+            background: var(--gold);
+        }
+        .services-row-2 {
+            display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px;
+            margin-top: 32px;
         }
 
         /* ===== STATS ===== */
@@ -208,13 +234,29 @@
         .stat-label {
             font-size: 13px; color: var(--text-light); line-height: 1.5;
         }
-        .stats-text {
-            max-width: 740px; margin: 0 auto; text-align: center;
-            color: var(--text-light); font-size: 15px; line-height: 1.8;
+        .stats-lists {
+            max-width: 800px; margin: 0 auto;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
+        }
+        .stats-list h4 {
+            font-size: 18px; font-weight: 500; color: var(--blue);
+            margin-bottom: 16px;
+        }
+        .stats-list ul {
+            list-style: none; padding: 0;
+        }
+        .stats-list li {
+            font-size: 14px; color: var(--text-light); line-height: 1.5;
+            padding: 6px 0 6px 18px; position: relative;
+        }
+        .stats-list li::before {
+            content: ''; position: absolute; left: 0; top: 13px;
+            width: 5px; height: 5px; border-radius: 50%;
+            background: var(--gold);
         }
         .stats-source {
             font-size: 11px; color: var(--text-muted);
-            text-align: center; margin-top: 32px;
+            text-align: center; margin-top: 40px;
         }
 
         /* ===== AREAS ===== */
@@ -228,11 +270,17 @@
         .area-card:hover { transform: translateY(-4px); }
         .area-card-bg {
             width: 100%; height: 100%; object-fit: cover;
+            position: absolute; top: 0; left: 0;
+        }
+        .area-card-gradient {
+            width: 100%; height: 100%;
+            position: absolute; top: 0; left: 0;
         }
         .area-card-overlay {
             position: absolute; bottom: 0; left: 0; right: 0;
             padding: 24px 20px; color: var(--white);
             background: linear-gradient(transparent, rgba(12,35,64,0.9));
+            z-index: 1;
         }
         .area-card h3 {
             font-size: 20px; font-weight: 500; margin-bottom: 4px;
@@ -240,12 +288,19 @@
         .area-card p { font-size: 12px; opacity: 0.8; line-height: 1.5; }
 
         /* ===== HOW IT WORKS ===== */
-        .steps-section { background: var(--blue); padding: 100px 24px; }
+        .steps-section { background: var(--blue); padding: 100px 24px; position: relative; overflow: hidden; }
+        .steps-section::before {
+            content: '✡'; position: absolute;
+            left: -80px; bottom: -80px;
+            font-size: 300px; color: rgba(184,146,74,0.03);
+            pointer-events: none;
+        }
         .steps-section .section-header h2 { color: var(--white); }
         .steps-section .section-label { color: var(--gold); }
         .steps {
             display: grid; grid-template-columns: repeat(3, 1fr);
             gap: 64px; max-width: 900px; margin: 0 auto;
+            position: relative; z-index: 1;
         }
         .step { text-align: center; }
         .step-number {
@@ -292,13 +347,16 @@
         }
         .about-card { text-align: center; }
         .about-photo {
-            width: 200px; height: 200px; border-radius: 4px;
-            object-fit: cover; margin-bottom: 24px;
-            filter: grayscale(15%);
+            width: 200px; height: 260px; border-radius: 4px;
+            object-fit: cover; object-position: center top;
+            margin: 0 auto 24px; display: block;
+            filter: grayscale(10%);
         }
         .about-photo-placeholder {
-            width: 200px; height: 200px; border-radius: 4px;
+            width: 200px; height: 260px; border-radius: 4px;
             background: var(--bg-warm); margin: 0 auto 24px;
+            display: flex; align-items: center; justify-content: center;
+            color: var(--text-muted); font-size: 12px;
         }
         .about-card h3 {
             font-size: 24px; font-weight: 500;
@@ -349,24 +407,34 @@
             background: var(--blue); color: var(--white);
             font-family: 'Inter', sans-serif; font-size: 14px;
             font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase;
-            cursor: pointer; transition: background 0.2s;
+            cursor: pointer; transition: background 0.2s; margin-top: 8px;
         }
         .btn-submit:hover { background: var(--blue-mid); }
 
         /* ===== CTA ===== */
         .cta-section {
             background: var(--blue); padding: 100px 24px; text-align: center;
+            position: relative; overflow: hidden;
+        }
+        .cta-section::after {
+            content: '✡'; position: absolute;
+            right: -40px; top: -40px;
+            font-size: 250px; color: rgba(184,146,74,0.04);
+            pointer-events: none;
         }
         .cta-section h2 {
             font-size: 40px; font-weight: 500;
             color: var(--white); margin-bottom: 16px;
+            position: relative; z-index: 1;
         }
         .cta-section p {
             font-size: 16px; color: rgba(255,255,255,0.6);
             max-width: 520px; margin: 0 auto 48px;
+            position: relative; z-index: 1;
         }
         .cta-buttons {
             display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+            position: relative; z-index: 1;
         }
         .btn-outline-white {
             border: 1px solid rgba(255,255,255,0.3); color: var(--white);
@@ -379,37 +447,62 @@
 
         /* ===== FOOTER ===== */
         .footer {
-            background: #080F1A; padding: 40px 24px 24px;
+            background: #080F1A; padding: 48px 24px 24px;
             color: rgba(255,255,255,0.5); font-size: 12px; line-height: 1.7;
         }
-        .footer-inner { max-width: 1100px; margin: 0 auto; text-align: center; }
-        .footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
-        .footer a:hover { color: rgba(255,255,255,0.8); }
+        .footer-inner { max-width: 900px; margin: 0 auto; }
+        .footer-top {
+            display: flex; justify-content: space-between; align-items: flex-start;
+            padding-bottom: 32px; border-bottom: 1px solid rgba(255,255,255,0.08);
+            margin-bottom: 32px;
+        }
+        .footer-brand-block {}
         .footer-brand {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 16px; color: rgba(255,255,255,0.8);
+            font-size: 18px; color: rgba(255,255,255,0.85);
             margin-bottom: 4px;
         }
         .footer-tagline {
             color: var(--gold); font-family: 'Cormorant Garamond', serif;
             font-style: italic; font-size: 13px; margin-bottom: 12px;
         }
-        .footer-links {
-            margin: 16px 0; display: flex; justify-content: center;
-            gap: 24px; font-size: 11px;
+        .footer-contact { font-size: 12px; line-height: 1.8; }
+        .footer-contact a { color: rgba(255,255,255,0.6); text-decoration: none; }
+        .footer-contact a:hover { color: rgba(255,255,255,0.9); }
+        .footer-nav { display: flex; flex-direction: column; gap: 8px; }
+        .footer-nav a {
+            color: rgba(255,255,255,0.5); text-decoration: none; font-size: 12px;
         }
+        .footer-nav a:hover { color: rgba(255,255,255,0.8); }
+        .footer-legal {
+            padding-bottom: 24px; margin-bottom: 24px;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+        .footer-legal-logos {
+            display: flex; align-items: center; gap: 16px;
+            margin-bottom: 16px;
+        }
+        .footer-legal-logos svg { width: 40px; height: 40px; }
         .footer-disclaimer {
-            max-width: 680px; margin: 16px auto 0;
-            font-size: 10px; line-height: 1.6;
-            color: rgba(255,255,255,0.3);
-            display: none;
+            font-size: 12px; line-height: 1.7;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 16px;
         }
-        .footer-toggle {
-            cursor: pointer; color: rgba(255,255,255,0.4);
-            font-size: 10px; margin-top: 8px;
-            display: inline-block;
+        .footer-professional {
+            font-size: 11px; line-height: 1.6;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 16px;
         }
-        .footer-toggle:hover { color: rgba(255,255,255,0.6); }
+        .footer-brokerage {
+            font-size: 11px; line-height: 1.6;
+            color: rgba(255,255,255,0.35);
+        }
+        .footer-bottom {
+            text-align: center;
+            font-size: 10px; color: rgba(255,255,255,0.25);
+        }
+        .footer a { color: inherit; text-decoration: none; }
+        .footer a:hover { color: rgba(255,255,255,0.8); }
 
         /* ===== MOBILE ===== */
         @media (max-width: 768px) {
@@ -422,14 +515,17 @@
                 border-bottom: 1px solid var(--border); gap: 16px;
             }
             .hero { padding: 130px 20px 70px; }
-            .hero h1 { font-size: 34px; }
+            .hero h1 { font-size: 32px; }
+            .hero::after { font-size: 200px; right: -40px; }
             .hero-sub { font-size: 15px; }
             .section { padding: 72px 20px; }
             .section-header h2 { font-size: 32px; }
             .section-header { margin-bottom: 48px; }
-            .cards-grid { grid-template-columns: 1fr; }
+            .services-grid { grid-template-columns: 1fr; }
+            .services-row-2 { grid-template-columns: 1fr; }
             .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
             .stat-number { font-size: 40px; }
+            .stats-lists { grid-template-columns: 1fr; gap: 32px; }
             .areas-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
             .area-card { height: 200px; }
             .steps { grid-template-columns: 1fr; gap: 40px; }
@@ -437,7 +533,7 @@
             .about-grid { grid-template-columns: 1fr; gap: 40px; }
             .form-row { grid-template-columns: 1fr; }
             .checkbox-grid { grid-template-columns: 1fr; }
-            .footer-links { flex-wrap: wrap; }
+            .footer-top { flex-direction: column; gap: 24px; }
         }
         @media (max-width: 480px) {
             .areas-grid { grid-template-columns: 1fr; }
@@ -446,84 +542,150 @@
 </head>
 <body>
 
+    <!-- ===== NAVIGATION ===== -->
     <nav class="nav">
         <div class="nav-inner">
             <a href="#" class="nav-logo">
-                <div class="nav-logo-text">SFJRA</div>
-                <div class="nav-logo-sub">South Florida Jewish Relocation Advisors</div>
+                <div class="nav-logo-icon">
+                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <polygon points="50,5 61,35 95,35 67,55 78,85 50,65 22,85 33,55 5,35 39,35" fill="none" stroke="#B8924A" stroke-width="3"/>
+                        <polygon points="50,18 58,38 80,38 62,52 70,72 50,58 30,72 38,52 20,38 42,38" fill="#B8924A" opacity="0.15"/>
+                    </svg>
+                </div>
+                <div class="nav-logo-text-wrap">
+                    <div class="nav-logo-text">South Florida Jewish<br>Relocation Advisors</div>
+                </div>
             </a>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#areas">Areas</a></li>
-                <li><a href="#why-florida">Why South Florida</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact" class="nav-cta">Plan Your Move</a></li>
+                <li><a href="#services" onclick="closeMenu()">Services</a></li>
+                <li><a href="#areas" onclick="closeMenu()">Areas</a></li>
+                <li><a href="#why-florida" onclick="closeMenu()">Why South Florida</a></li>
+                <li><a href="#about" onclick="closeMenu()">About</a></li>
+                <li><a href="#contact" class="nav-cta" onclick="closeMenu()">Plan Your Move</a></li>
             </ul>
-            <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('active')">
+            <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('active')" aria-label="Menu">
                 <span></span><span></span><span></span>
             </button>
         </div>
     </nav>
 
+    <!-- ===== HERO ===== -->
     <section class="hero">
         <div class="hero-inner">
-            <div class="hero-divider"></div>
-            <p class="hero-tagline">From First Thought to Mezuzah on Your Door</p>
-            <h1>Your Family. Your Community.<br>Your New Home in South&nbsp;Florida.</h1>
+            <div class="hero-star">
+                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="50,5 61,35 95,35 67,55 78,85 50,65 22,85 33,55 5,35 39,35" fill="none" stroke="#B8924A" stroke-width="2.5"/>
+                </svg>
+            </div>
+            <p class="hero-tagline">
+                <svg class="mezuzah-icon" viewBox="0 0 20 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="3" y="2" width="14" height="46" rx="3" fill="none" stroke="#B8924A" stroke-width="1.5"/>
+                    <rect x="6" y="6" width="8" height="12" rx="1" fill="none" stroke="#B8924A" stroke-width="1" opacity="0.6"/>
+                    <text x="10" y="15" font-size="8" fill="#B8924A" text-anchor="middle" font-family="serif" opacity="0.7">ש</text>
+                    <line x1="6" y1="22" x2="14" y2="22" stroke="#B8924A" stroke-width="0.8" opacity="0.4"/>
+                    <line x1="6" y1="28" x2="14" y2="28" stroke="#B8924A" stroke-width="0.8" opacity="0.4"/>
+                    <line x1="6" y1="34" x2="14" y2="34" stroke="#B8924A" stroke-width="0.8" opacity="0.4"/>
+                </svg>
+                From First Thought to Mezuzah on Your Door
+                <svg class="mezuzah-icon" viewBox="0 0 20 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="3" y="2" width="14" height="46" rx="3" fill="none" stroke="#B8924A" stroke-width="1.5"/>
+                    <rect x="6" y="6" width="8" height="12" rx="1" fill="none" stroke="#B8924A" stroke-width="1" opacity="0.6"/>
+                    <text x="10" y="15" font-size="8" fill="#B8924A" text-anchor="middle" font-family="serif" opacity="0.7">ש</text>
+                    <line x1="6" y1="22" x2="14" y2="22" stroke="#B8924A" stroke-width="0.8" opacity="0.4"/>
+                    <line x1="6" y1="28" x2="14" y2="28" stroke="#B8924A" stroke-width="0.8" opacity="0.4"/>
+                    <line x1="6" y1="34" x2="14" y2="34" stroke="#B8924A" stroke-width="0.8" opacity="0.4"/>
+                </svg>
+            </p>
+            <h1>Your Family<br>Your Community<br>Your New Home in South&nbsp;Florida</h1>
             <p class="hero-sub">Real estate and relocation guidance for families moving to South Florida — from finding the right home near the places that matter to you, to schools, community connections, professional services and settling&nbsp;in.</p>
             <div class="hero-buttons">
                 <a href="#contact" class="btn-primary">Plan Your Move</a>
                 <a href="tel:+17866951465" class="btn-secondary">+1 786-695-1465</a>
             </div>
-            <p class="hero-brokerage">Real estate services provided through Trybal Group LLC, a Florida-licensed brokerage</p>
         </div>
     </section>
 
+    <!-- ===== SERVICES ===== -->
     <section class="section" id="services">
         <div class="section-inner">
             <div class="section-header">
+                <div class="section-star"><svg viewBox="0 0 100 100" fill="none"><polygon points="50,5 61,35 95,35 67,55 78,85 50,65 22,85 33,55 5,35 39,35" fill="none" stroke="#B8924A" stroke-width="2.5"/></svg></div>
                 <p class="section-label">What We Do</p>
                 <h2>A Complete Relocation Experience</h2>
                 <p>We coordinate the entire process — from finding your home to connecting your family with the community and professionals you need.</p>
             </div>
-            <div class="cards-grid">
-                <div class="card">
-                    <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-                    <h3>Find Your Home</h3>
-                    <p>Buying, renting, new construction, pre-construction, investment properties and custom single-family home construction — from lot selection to move-in.</p>
+            <div class="services-grid">
+                <div class="service-category">
+                    <h3>Real Estate</h3>
+                    <ul>
+                        <li>Buy</li>
+                        <li>Rent</li>
+                        <li>New Construction / Pre-Construction</li>
+                        <li>Investment Properties</li>
+                        <li>Sell</li>
+                        <li>Property Management</li>
+                        <li>Custom single-family home construction from lot selection</li>
+                        <li>Home adaptation based on client requirements</li>
+                    </ul>
                 </div>
-                <div class="card">
-                    <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
-                    <h3>Synagogue &amp; Shabbat Planning</h3>
-                    <p>Property searches built around your walking distance to a specific synagogue, community institution or any destination you choose.</p>
+                <div class="service-category">
+                    <h3>Community &amp; Family</h3>
+                    <ul>
+                        <li>Property search by walking distance to your synagogue, school, workplace or other destination</li>
+                        <li>Schools and daycare by children's ages and family requirements</li>
+                        <li>Synagogue and community resources</li>
+                        <li>Eruv information</li>
+                        <li>Kosher restaurants, stores and services</li>
+                        <li>Introductions to rabbis, synagogues and community organizations</li>
+                    </ul>
                 </div>
-                <div class="card">
-                    <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
-                    <h3>Schools &amp; Family</h3>
-                    <p>Help identifying schools, preschools and childcare options based on your children's ages, educational preferences and location requirements.</p>
+                <div class="service-category">
+                    <h3>Professional Network</h3>
+                    <ul>
+                        <li>Mortgage</li>
+                        <li>Foreign-national financing</li>
+                        <li>Insurance</li>
+                        <li>CPAs</li>
+                        <li>Attorneys</li>
+                        <li>Immigration professionals</li>
+                        <li>Tax and financial professionals</li>
+                    </ul>
                 </div>
-                <div class="card">
-                    <div class="card-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-                    <h3>Homes That Work for You</h3>
-                    <p>Kitchen configuration, renovation coordination, appliance planning, design services and connections to local contractors — based on your household requirements.</p>
+            </div>
+            <div class="services-row-2">
+                <div class="service-category">
+                    <h3>Business &amp; Commercial</h3>
+                    <ul>
+                        <li>Business acquisition opportunities</li>
+                        <li>Commercial property</li>
+                        <li>Office / retail / warehouse leasing</li>
+                        <li>Investment opportunities</li>
+                    </ul>
                 </div>
-                <div class="card">
-                    <div class="card-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a4 4 0 00-8 0v2"/></svg></div>
-                    <h3>Business &amp; Professional</h3>
-                    <p>Commercial real estate, business opportunities and introductions to immigration attorneys, CPAs, lenders, insurance providers and other professionals.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon"><svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
-                    <h3>Moving &amp; Settling In</h3>
-                    <p>Movers, temporary housing, storage, vehicle transport, home setup, utilities, property management and ongoing local support after you arrive.</p>
+                <div class="service-category">
+                    <h3>Relocation Concierge</h3>
+                    <ul>
+                        <li>Movers</li>
+                        <li>Storage</li>
+                        <li>Vehicle shipping</li>
+                        <li>Temporary housing</li>
+                        <li>Contractors and designers</li>
+                        <li>Home setup</li>
+                        <li>Renovation based on client requirements</li>
+                        <li>Utilities and local services</li>
+                        <li>Home watch</li>
+                        <li>Settling-in assistance</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- ===== WHY SOUTH FLORIDA ===== -->
     <section class="stats-section" id="why-florida">
         <div class="section-inner">
             <div class="section-header">
+                <div class="section-star"><svg viewBox="0 0 100 100" fill="none"><polygon points="50,5 61,35 95,35 67,55 78,85 50,65 22,85 33,55 5,35 39,35" fill="none" stroke="#B8924A" stroke-width="2.5"/></svg></div>
                 <p class="section-label">Why South Florida</p>
                 <h2>A Community That's Already Here</h2>
             </div>
@@ -545,35 +707,53 @@
                     <div class="stat-label">of Jewish K–12 students<br>attend Jewish day schools</div>
                 </div>
             </div>
-            <div class="stats-text">
-                <p>Across Miami-Dade, Broward and Palm Beach, families have access to a broad network of synagogues representing Orthodox, Modern Orthodox, Chabad-Lubavitch, Sephardic, Conservative, Reform and other Jewish traditions — alongside Jewish schools, community organizations, kosher restaurants, markets and services.</p>
-                <br>
-                <p>No state personal income tax. Year-round warm climate. Major international airports with direct flights across North America, Europe and Israel. Florida has adopted legislation specifically addressing antisemitism and incorporating the IHRA working definition.</p>
+            <div class="stats-lists">
+                <div class="stats-list">
+                    <h4>Jewish Community</h4>
+                    <ul>
+                        <li>Synagogues across all traditions — Orthodox, Modern Orthodox, Chabad-Lubavitch, Sephardic, Conservative, Reform</li>
+                        <li>Jewish day schools and preschools</li>
+                        <li>Community organizations and cultural centers</li>
+                        <li>Kosher restaurants, markets and services</li>
+                    </ul>
+                </div>
+                <div class="stats-list">
+                    <h4>Florida Advantages</h4>
+                    <ul>
+                        <li>No state personal income tax</li>
+                        <li>Year-round warm climate</li>
+                        <li>Major international airports with direct flights across North America, Europe and Israel</li>
+                        <li>State legislation specifically addressing antisemitism and incorporating the IHRA working definition</li>
+                    </ul>
+                </div>
             </div>
             <p class="stats-source">Source: Brandeis University / Greater Miami Jewish Federation, 2024</p>
         </div>
     </section>
 
+    <!-- ===== AREAS ===== -->
     <section class="section" id="areas">
         <div class="section-inner">
             <div class="section-header">
+                <div class="section-star"><svg viewBox="0 0 100 100" fill="none"><polygon points="50,5 61,35 95,35 67,55 78,85 50,65 22,85 33,55 5,35 39,35" fill="none" stroke="#B8924A" stroke-width="2.5"/></svg></div>
                 <p class="section-label">Where We Work</p>
                 <h2>Explore Our Areas</h2>
                 <p>Each area offers a different lifestyle — from beachfront to suburban. We help you find the right one.</p>
             </div>
             <div class="areas-grid">
-                <div class="area-card"><div class="area-card-bg" style="background: linear-gradient(135deg, #1a5f7a, #2a8fb5);"></div><div class="area-card-overlay"><h3>Miami Beach</h3><p>Historic community, walkable neighborhoods, culture and dining.</p></div></div>
-                <div class="area-card"><div class="area-card-bg" style="background: linear-gradient(135deg, #0C2340, #1B3A5C);"></div><div class="area-card-overlay"><h3>Surfside &amp; Bal Harbour</h3><p>Beachfront living with established daily infrastructure.</p></div></div>
-                <div class="area-card"><div class="area-card-bg" style="background: linear-gradient(135deg, #2C5F8A, #3a9fc5);"></div><div class="area-card-overlay"><h3>Sunny Isles Beach</h3><p>Oceanfront towers and a growing international community.</p></div></div>
-                <div class="area-card"><div class="area-card-bg" style="background: linear-gradient(135deg, #2d5a3d, #4a8b6a);"></div><div class="area-card-overlay"><h3>Aventura</h3><p>Family-oriented with excellent schools and community access.</p></div></div>
-                <div class="area-card"><div class="area-card-bg" style="background: linear-gradient(135deg, #3d4a5a, #5a7a8b);"></div><div class="area-card-overlay"><h3>North Miami Beach</h3><p>Accessible community with diverse housing options.</p></div></div>
-                <div class="area-card"><div class="area-card-bg" style="background: linear-gradient(135deg, #5a4a3d, #8b7a6a);"></div><div class="area-card-overlay"><h3>Hollywood &amp; Hallandale</h3><p>Growing community, beach access, affordable options.</p></div></div>
-                <div class="area-card"><div class="area-card-bg" style="background: linear-gradient(135deg, #3d5a2d, #6a8b4a);"></div><div class="area-card-overlay"><h3>Boca Raton &amp; Delray</h3><p>Suburban lifestyle with top schools and established institutions.</p></div></div>
-                <div class="area-card"><div class="area-card-bg" style="background: linear-gradient(135deg, #4a3d5a, #7a6a8b);"></div><div class="area-card-overlay"><h3>Palm Beach &amp; WPB</h3><p>Upscale coastal living and prestigious neighborhoods.</p></div></div>
+                <div class="area-card"><div class="area-card-gradient" style="background: linear-gradient(135deg, #1a5f7a, #2a8fb5);"></div><div class="area-card-overlay"><h3>Miami Beach</h3><p>Historic community, walkable neighborhoods, culture and dining</p></div></div>
+                <div class="area-card"><div class="area-card-gradient" style="background: linear-gradient(135deg, #0C2340, #1B3A5C);"></div><div class="area-card-overlay"><h3>Surfside &amp; Bal Harbour</h3><p>Beachfront living with established daily infrastructure</p></div></div>
+                <div class="area-card"><div class="area-card-gradient" style="background: linear-gradient(135deg, #2C5F8A, #3a9fc5);"></div><div class="area-card-overlay"><h3>Sunny Isles Beach</h3><p>Oceanfront towers and a growing international community</p></div></div>
+                <div class="area-card"><div class="area-card-gradient" style="background: linear-gradient(135deg, #2d5a3d, #4a8b6a);"></div><div class="area-card-overlay"><h3>Aventura</h3><p>Family-oriented with excellent schools and community access</p></div></div>
+                <div class="area-card"><div class="area-card-gradient" style="background: linear-gradient(135deg, #3d4a5a, #5a7a8b);"></div><div class="area-card-overlay"><h3>North Miami Beach</h3><p>Accessible community with diverse housing options</p></div></div>
+                <div class="area-card"><div class="area-card-gradient" style="background: linear-gradient(135deg, #5a4a3d, #8b7a6a);"></div><div class="area-card-overlay"><h3>Hollywood &amp; Hallandale</h3><p>Growing community, beach access, affordable options</p></div></div>
+                <div class="area-card"><div class="area-card-gradient" style="background: linear-gradient(135deg, #3d5a2d, #6a8b4a);"></div><div class="area-card-overlay"><h3>Boca Raton &amp; Delray</h3><p>Suburban lifestyle with top schools and established institutions</p></div></div>
+                <div class="area-card"><div class="area-card-gradient" style="background: linear-gradient(135deg, #4a3d5a, #7a6a8b);"></div><div class="area-card-overlay"><h3>Palm Beach &amp; WPB</h3><p>Upscale coastal living and prestigious neighborhoods</p></div></div>
             </div>
         </div>
     </section>
 
+    <!-- ===== HOW IT WORKS ===== -->
     <section class="steps-section">
         <div class="section-inner">
             <div class="section-header">
@@ -600,9 +780,11 @@
         </div>
     </section>
 
+    <!-- ===== TESTIMONIALS ===== -->
     <section class="section" style="background: var(--cream);">
         <div class="section-inner">
             <div class="section-header">
+                <div class="section-star"><svg viewBox="0 0 100 100" fill="none"><polygon points="50,5 61,35 95,35 67,55 78,85 50,65 22,85 33,55 5,35 39,35" fill="none" stroke="#B8924A" stroke-width="2.5"/></svg></div>
                 <p class="section-label">What Our Clients Say</p>
                 <h2>Families Who Made the Move</h2>
             </div>
@@ -623,9 +805,11 @@
         </div>
     </section>
 
+    <!-- ===== ABOUT ===== -->
     <section class="section" id="about">
         <div class="section-inner">
             <div class="section-header">
+                <div class="section-star"><svg viewBox="0 0 100 100" fill="none"><polygon points="50,5 61,35 95,35 67,55 78,85 50,65 22,85 33,55 5,35 39,35" fill="none" stroke="#B8924A" stroke-width="2.5"/></svg></div>
                 <p class="section-label">Our Team</p>
                 <h2>About Us</h2>
                 <p>A specialized relocation and real estate service designed to help families navigate a move to South Florida.</p>
@@ -635,22 +819,23 @@
                     <img src="alex.jpg" alt="Alexander Adamov" class="about-photo">
                     <h3>Alexander Adamov</h3>
                     <p class="about-title">Licensed Real Estate Agent · FL# SL3624624</p>
-                    <p>Specializing in residential and commercial real estate across South Florida. Experienced working with international buyers and relocating families from Canada, Israel, Europe and Latin America. Fluent in English, Russian and Ukrainian.</p>
+                    <p>Specializing in residential and commercial real estate across South Florida. Experienced working with international buyers and relocating families from Canada, Israel, Europe and Latin America.</p>
                 </div>
                 <div class="about-card">
-                    <div class="about-photo-placeholder"></div>
+                    <div class="about-photo-placeholder">Photo</div>
                     <h3>Anat Askrabic</h3>
                     <p class="about-title">Licensed Real Estate Agent</p>
                     <p>Dedicated to helping families find their ideal home in South Florida, with a focus on understanding each client's unique relocation needs and community requirements.</p>
                 </div>
             </div>
-            <p style="text-align: center; margin-top: 40px; font-size: 12px; color: var(--text-muted);">Real estate services provided through Trybal Group LLC, a Florida-licensed brokerage.</p>
         </div>
     </section>
 
+    <!-- ===== CONTACT FORM ===== -->
     <section class="section form-section" id="contact">
         <div class="section-inner" style="max-width: 720px;">
             <div class="section-header">
+                <div class="section-star"><svg viewBox="0 0 100 100" fill="none"><polygon points="50,5 61,35 95,35 67,55 78,85 50,65 22,85 33,55 5,35 39,35" fill="none" stroke="#B8924A" stroke-width="2.5"/></svg></div>
                 <p class="section-label">Get Started</p>
                 <h2>Plan Your Move</h2>
                 <p>Tell us about your relocation plans. No obligation — just a conversation about what South Florida could look like for your family.</p>
@@ -662,27 +847,45 @@
                 </div>
                 <div class="form-row">
                     <div class="form-group"><label>Phone / WhatsApp</label><input type="tel" name="phone" placeholder="+1 (XXX) XXX-XXXX"></div>
+                    <div class="form-group"><label>Preferred language</label>
+                        <select name="language">
+                            <option value="">Select...</option>
+                            <option>English</option>
+                            <option>Hebrew</option>
+                            <option>Spanish</option>
+                            <option>Russian</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
                     <div class="form-group"><label>Where are you moving from?</label><input type="text" name="origin" placeholder="City, State/Province, Country"></div>
-                </div>
-                <div class="form-row">
                     <div class="form-group"><label>Expected move date</label><input type="text" name="move_date" placeholder="e.g. Spring 2027, ASAP, Not sure"></div>
-                    <div class="form-group"><label>Buy / Rent / Not Sure</label><select name="type"><option value="">Select...</option><option>Buy</option><option>Rent</option><option>Both / Not sure</option></select></div>
                 </div>
                 <div class="form-row">
+                    <div class="form-group"><label>Buy / Rent / Not Sure</label>
+                        <select name="type">
+                            <option value="">Select...</option>
+                            <option>Buy</option>
+                            <option>Rent</option>
+                            <option>Both / Not sure</option>
+                        </select>
+                    </div>
                     <div class="form-group"><label>Budget range</label><input type="text" name="budget" placeholder="e.g. $500K–$800K or $4K–$6K/mo"></div>
-                    <div class="form-group"><label>Bedrooms / Property type</label><input type="text" name="property" placeholder="e.g. 3BR condo, Single family home"></div>
                 </div>
                 <div class="form-row">
+                    <div class="form-group"><label>Bedrooms / Property type</label><input type="text" name="property" placeholder="e.g. 3BR condo, Single family home"></div>
                     <div class="form-group"><label>Adults</label><input type="number" name="adults" min="1" placeholder="Number of adults"></div>
-                    <div class="form-group"><label>Children &amp; ages</label><input type="text" name="children" placeholder="e.g. 2 children (ages 5, 8)"></div>
                 </div>
-                <div class="form-group full"><label>Preferred areas</label><input type="text" name="areas" placeholder="e.g. Aventura, Boca Raton, Surfside — or Not sure yet"></div>
+                <div class="form-row">
+                    <div class="form-group"><label>Children &amp; ages</label><input type="text" name="children" placeholder="e.g. 2 children (ages 5, 8)"></div>
+                    <div class="form-group"><label>Preferred areas</label><input type="text" name="areas" placeholder="e.g. Aventura, Boca Raton — or Not sure yet"></div>
+                </div>
                 <div class="form-group full"><label>Specific synagogue, school, workplace or other destination you'd like to be near?</label><input type="text" name="proximity" placeholder="e.g. BRS Boca Raton, Scheck Hillel, specific workplace"></div>
                 <div class="form-group full">
                     <label>Services needed</label>
                     <div class="checkbox-grid">
                         <label class="checkbox-label"><input type="checkbox" name="svc" value="home"> Home Search</label>
-                        <label class="checkbox-label"><input type="checkbox" name="svc" value="schools"> Schools</label>
+                        <label class="checkbox-label"><input type="checkbox" name="svc" value="schools"> Schools &amp; Daycare</label>
                         <label class="checkbox-label"><input type="checkbox" name="svc" value="community"> Synagogue / Community</label>
                         <label class="checkbox-label"><input type="checkbox" name="svc" value="mortgage"> Mortgage / Financing</label>
                         <label class="checkbox-label"><input type="checkbox" name="svc" value="immigration"> Immigration</label>
@@ -697,6 +900,7 @@
         </div>
     </section>
 
+    <!-- ===== CTA ===== -->
     <section class="cta-section">
         <div class="section-inner">
             <h2>Ready to Begin?</h2>
@@ -708,23 +912,63 @@
         </div>
     </section>
 
+    <!-- ===== FOOTER ===== -->
     <footer class="footer">
         <div class="footer-inner">
-            <div class="footer-brand">South Florida Jewish Relocation Advisors</div>
-            <div class="footer-tagline">From First Thought to Mezuzah on Your Door</div>
-            <p>Trybal Group LLC · Miami, FL · <a href="tel:+17866951465">+1 786-695-1465</a></p>
-            <div class="footer-links">
-                <a href="#services">Services</a>
-                <a href="#areas">Areas</a>
-                <a href="#why-florida">Why South Florida</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
+            <div class="footer-top">
+                <div class="footer-brand-block">
+                    <div class="footer-brand">South Florida Jewish Relocation Advisors</div>
+                    <div class="footer-tagline">From First Thought to Mezuzah on Your Door</div>
+                    <div class="footer-contact">
+                        <a href="tel:+17866951465">+1 786-695-1465</a><br>
+                        <a href="mailto:adamov.real@gmail.com">adamov.real@gmail.com</a>
+                    </div>
+                </div>
+                <div class="footer-nav">
+                    <a href="#services">Services</a>
+                    <a href="#areas">Areas</a>
+                    <a href="#why-florida">Why South Florida</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Plan Your Move</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                </div>
             </div>
-            <span class="footer-toggle" onclick="var d=document.getElementById('fd'); d.style.display=d.style.display==='none'?'block':'none';">Fair Housing &amp; Equal Opportunity ▸</span>
-            <div class="footer-disclaimer" id="fd">Our services are available to clients of all backgrounds. We do not recommend properties or neighborhoods based on race, religion, national origin or any other protected class. All property searches are conducted based on objective criteria specified by the client, including budget, property characteristics, commute requirements and proximity to specific destinations.</div>
-            <p style="margin-top: 16px; font-size: 10px; opacity: 0.3;">© 2026 South Florida Jewish Relocation Advisors</p>
+
+            <div class="footer-legal">
+                <div class="footer-legal-logos">
+                    <!-- Fair Housing Logo -->
+                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2" y="2" width="44" height="44" rx="4" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+                        <path d="M24 8L10 18v20h28V18L24 8z" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.2"/>
+                        <text x="24" y="34" font-size="5" fill="rgba(255,255,255,0.5)" text-anchor="middle" font-family="Inter, sans-serif" font-weight="600">EQUAL</text>
+                        <text x="24" y="40" font-size="4" fill="rgba(255,255,255,0.4)" text-anchor="middle" font-family="Inter, sans-serif">HOUSING</text>
+                    </svg>
+                    <span style="font-size: 11px; color: rgba(255,255,255,0.4);">Fair Housing · Equal Opportunity</span>
+                </div>
+                <p class="footer-disclaimer">Our services are available to clients of all backgrounds. We do not recommend properties or neighborhoods based on race, religion, national origin or any other protected class. All property searches are conducted based on objective criteria specified by the client, including budget, property characteristics, commute requirements and proximity to specific destinations.</p>
+                <p class="footer-professional">All legal, immigration, tax, financial and other licensed professional services referenced on this website are provided by independent licensed professionals in their respective fields. South Florida Jewish Relocation Advisors facilitates introductions only and does not provide these services directly.</p>
+                <p class="footer-brokerage">Real estate services provided through Trybal Group LLC, a Florida-licensed brokerage. Office: 55 SW 9th St, Unit 4506, Miami, FL 33130. Alexander Adamov, Licensed Real Estate Agent, FL# SL3624624.</p>
+            </div>
+
+            <div class="footer-bottom">
+                © 2026 South Florida Jewish Relocation Advisors · <a href="privacy.html">Privacy Policy</a>
+            </div>
         </div>
     </footer>
+
+    <script>
+        function closeMenu() {
+            document.getElementById('navLinks').classList.remove('active');
+        }
+        // Also close on any click outside
+        document.addEventListener('click', function(e) {
+            var nav = document.getElementById('navLinks');
+            var toggle = document.querySelector('.nav-toggle');
+            if (nav.classList.contains('active') && !nav.contains(e.target) && !toggle.contains(e.target)) {
+                nav.classList.remove('active');
+            }
+        });
+    </script>
 
 </body>
 </html>
