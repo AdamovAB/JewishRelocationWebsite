@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>יועצי רילוקיישן יהודי לדרום פלורידה — מהמחשבה הראשונה עד המזוזה על הדלת</title>
-    <meta name="description" content="ייעוץ נדל״ן ורילוקיישן למשפחות יהודיות שעוברות לדרום פלורידה. ממציאת הבית הנכון ליד בית הכנסת שלכם, ועד בתי ספר, קשרים קהילתיים, שירותים מקצועיים והתיישבות.">
+    <title>South Florida Jewish Relocation Advisors — מהמחשבה הראשונה ועד המזוזה בפתח הבית החדש</title>
+    <meta name="description" content="ליווי מקצועי בנדל״ן וברילוקיישן למשפחות שעוברות לדרום פלורידה. ממציאת הבית הנכון בקרבת המקומות החשובים לכם, דרך בתי ספר וחיבור לקהילה ועד אנשי מקצוע, לוגיסטיקה והתאקלמות.">
     <meta name="robots" content="noindex, nofollow">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,14 +62,10 @@
         .nav-logo-icon svg { width: 100%; height: 100%; }
         .nav-logo-text-wrap { line-height: 1.15; }
         .nav-logo-text {
-            font-family: 'Noto Serif Hebrew', serif;
-            font-size: 16px; font-weight: 700;
+            font-family: 'Cormorant Garamond', 'Noto Serif Hebrew', serif;
+            font-size: 14px; font-weight: 700;
             color: var(--blue); letter-spacing: -0.3px;
-        }
-        .nav-logo-sub {
-            font-family: 'Rubik', sans-serif;
-            font-size: 9px; font-weight: 600;
-            color: var(--gold); letter-spacing: 1.5px;
+            direction: ltr; text-align: left;
         }
         .nav-links {
             display: flex; align-items: center; gap: 28px; list-style: none;
@@ -86,13 +82,6 @@
             transition: background 0.2s;
         }
         .nav-cta:hover { background: var(--blue-mid) !important; }
-        .nav-toggle {
-            display: none; background: none; border: none; cursor: pointer; padding: 8px;
-        }
-        .nav-toggle span {
-            display: block; width: 22px; height: 1.5px;
-            background: var(--blue); margin: 5px 0; transition: 0.3s;
-        }
         .lang-btn {
             font-size: 12px; color: var(--text-muted);
             text-decoration: none; font-weight: 500;
@@ -101,6 +90,13 @@
             margin-right: 4px;
         }
         .lang-btn:hover { color: var(--blue); border-color: var(--blue); }
+        .nav-toggle {
+            display: none; background: none; border: none; cursor: pointer; padding: 8px;
+        }
+        .nav-toggle span {
+            display: block; width: 22px; height: 1.5px;
+            background: var(--blue); margin: 5px 0; transition: 0.3s;
+        }
 
         /* ===== HERO ===== */
         .hero {
@@ -125,19 +121,19 @@
         .hero-tagline {
             display: flex; align-items: center; justify-content: center; gap: 12px;
             font-size: 11px; font-weight: 600;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             color: var(--gold);
             margin-bottom: 24px;
         }
         .hero h1 {
             font-size: 48px; font-weight: 700;
-            line-height: 1.15; margin-bottom: 24px;
+            line-height: 1.2; margin-bottom: 24px;
             letter-spacing: -0.5px;
         }
         .hero-sub {
-            font-size: 17px; line-height: 1.7;
+            font-size: 17px; line-height: 1.8;
             color: rgba(255,255,255,0.7);
-            max-width: 600px; margin: 0 auto 40px;
+            max-width: 640px; margin: 0 auto 40px;
         }
         .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
         .btn-primary {
@@ -147,7 +143,6 @@
             font-size: 13px; font-weight: 600;
             text-decoration: none;
             letter-spacing: 0.5px;
-            text-transform: uppercase;
             border-radius: 4px;
             transition: background 0.2s, transform 0.1s;
         }
@@ -174,13 +169,13 @@
         }
         .section-header p {
             font-size: 16px; color: var(--text-light);
-            max-width: 560px; margin: 0 auto; line-height: 1.7;
+            max-width: 600px; margin: 0 auto; line-height: 1.7;
         }
         .section-label {
             font-size: 11px; font-weight: 600;
             letter-spacing: 2px;
             color: var(--gold);
-            text-transform: uppercase; margin-bottom: 16px;
+            margin-bottom: 16px;
         }
         .section-star { width: 28px; height: 28px; margin: 0 auto 16px; opacity: 0.4; }
         .section-star svg { width: 100%; height: 100%; }
@@ -222,11 +217,10 @@
         }
         .stat-number {
             font-family: 'Noto Serif Hebrew', serif;
-            font-size: 52px; font-weight: 700; color: var(--gold);
+            font-size: 48px; font-weight: 700; color: var(--gold);
             line-height: 1; margin-bottom: 8px;
-            direction: ltr; display: inline-block;
         }
-        .stat-label { font-size: 14px; color: rgba(255,255,255,0.65); line-height: 1.5; }
+        .stat-label { font-size: 14px; color: rgba(255,255,255,0.65); line-height: 1.6; }
         .stats-lists {
             display: grid; grid-template-columns: 1fr 1fr;
             gap: 48px; border-top: 1px solid rgba(255,255,255,0.1);
@@ -270,7 +264,7 @@
             font-size: 18px; margin-bottom: 4px;
         }
         .area-card-overlay p {
-            font-size: 12px; opacity: 0.8; line-height: 1.4;
+            font-size: 12px; opacity: 0.8; line-height: 1.5;
         }
 
         /* ===== STEPS ===== */
@@ -321,7 +315,6 @@
         }
         .testimonial-origin {
             font-size: 12px; color: var(--text-muted);
-            direction: ltr; display: inline-block;
         }
 
         /* ===== ABOUT ===== */
@@ -339,6 +332,7 @@
         .about-card h3 {
             font-size: 22px; color: var(--blue);
             margin-bottom: 4px;
+            direction: ltr;
         }
         .about-title {
             font-size: 13px; color: var(--gold);
@@ -346,7 +340,7 @@
         }
         .about-card p:last-child {
             font-size: 14px; color: var(--text-light);
-            line-height: 1.7; max-width: 360px; margin: 0 auto;
+            line-height: 1.7; max-width: 380px; margin: 0 auto;
         }
 
         /* ===== FORM ===== */
@@ -371,7 +365,7 @@
             outline: none; border-color: var(--gold);
         }
         .checkbox-grid {
-            display: grid; grid-template-columns: 1fr 1fr;
+            display: grid; grid-template-columns: 1fr 1fr 1fr;
             gap: 10px; margin-top: 8px;
         }
         .checkbox-label {
@@ -428,9 +422,10 @@
             margin-bottom: 32px;
         }
         .footer-brand {
-            font-family: 'Noto Serif Hebrew', serif;
+            font-family: 'Cormorant Garamond', 'Noto Serif Hebrew', serif;
             font-size: 18px; color: var(--white);
             margin-bottom: 4px;
+            direction: ltr; text-align: right;
         }
         .footer-tagline {
             font-size: 12px; color: var(--gold); margin-bottom: 16px;
@@ -486,11 +481,12 @@
             .testimonials-grid { grid-template-columns: 1fr; }
             .about-grid { grid-template-columns: 1fr; gap: 40px; }
             .form-row { grid-template-columns: 1fr; }
-            .checkbox-grid { grid-template-columns: 1fr; }
+            .checkbox-grid { grid-template-columns: 1fr 1fr; }
             .footer-top { flex-direction: column; gap: 24px; }
         }
         @media (max-width: 480px) {
             .areas-grid { grid-template-columns: 1fr; }
+            .checkbox-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -507,7 +503,7 @@
                     </svg>
                 </div>
                 <div class="nav-logo-text-wrap">
-                    <div class="nav-logo-text">יועצי רילוקיישן יהודי<br>לדרום פלורידה</div>
+                    <div class="nav-logo-text">South Florida Jewish<br>Relocation Advisors</div>
                 </div>
             </a>
             <ul class="nav-links" id="navLinks">
@@ -534,11 +530,11 @@
             </div>
             <p class="hero-tagline">
                 <svg style="width:18px;height:18px;opacity:0.5;" viewBox="0 0 100 100" fill="none"><path d="M50 8 L88 72 H12 Z M50 92 L12 28 H88 Z" fill="none" stroke="#B8924A" stroke-width="4"/></svg>
-                מהמחשבה הראשונה עד המזוזה על הדלת
+                מהמחשבה הראשונה ועד המזוזה בפתח הבית החדש
                 <svg style="width:18px;height:18px;opacity:0.5;" viewBox="0 0 100 100" fill="none"><path d="M50 8 L88 72 H12 Z M50 92 L12 28 H88 Z" fill="none" stroke="#B8924A" stroke-width="4"/></svg>
             </p>
-            <h1>המשפחה שלכם<br>הקהילה שלכם<br>הבית החדש שלכם בדרום&nbsp;פלורידה</h1>
-            <p class="hero-sub">ייעוץ נדל״ן ורילוקיישן למשפחות שעוברות לדרום פלורידה — ממציאת הבית הנכון ליד המקומות החשובים לכם, ועד בתי ספר, קשרים קהילתיים, שירותים מקצועיים והתיישבות.</p>
+            <h1>המשפחה שלכם.<br>הקהילה שלכם.<br>הבית החדש שלכם בדרום&nbsp;פלורידה.</h1>
+            <p class="hero-sub">ליווי מקצועי בנדל״ן וברילוקיישן למשפחות שעוברות לדרום פלורידה — ממציאת הבית הנכון בקרבת המקומות החשובים לכם, דרך בתי ספר וחיבור לקהילה ועד אנשי מקצוע, לוגיסטיקה והתאקלמות.</p>
             <div class="hero-buttons">
                 <a href="#contact" class="btn-primary">תכננו את המעבר</a>
                 <a href="tel:+17866951465" class="btn-secondary">+1 786-695-1465</a>
@@ -552,68 +548,68 @@
             <div class="section-header">
                 <div class="section-star"><svg viewBox="0 0 100 100" fill="none"><path d="M50 8 L88 72 H12 Z M50 92 L12 28 H88 Z" fill="none" stroke="#B8924A" stroke-width="2.5"/></svg></div>
                 <p class="section-label">מה אנחנו עושים</p>
-                <h2>חוויית רילוקיישן מלאה</h2>
-                <p>אנחנו מתאמים את כל התהליך — ממציאת הבית שלכם ועד חיבור המשפחה לקהילה ולאנשי המקצוע שאתם צריכים.</p>
+                <h2>חוויית רילוקיישן מקיפה</h2>
+                <p>אנחנו מרכזים ומלווים את כל התהליך — ממציאת הבית שלכם ועד לחיבור המשפחה לקהילה ולאנשי המקצוע שאתם צריכים.</p>
             </div>
             <div class="services-grid">
                 <div class="service-category">
                     <h3>נדל״ן</h3>
                     <ul>
                         <li>שכירות · קנייה · מכירה</li>
-                        <li>בנייה חדשה / פרי-קונסטרקשן</li>
+                        <li>פרויקטים חדשים וטרום־בנייה</li>
                         <li>נכסים להשקעה</li>
                         <li>ניהול נכסים</li>
-                        <li>בניית בית צמוד קרקע בהתאמה אישית מבחירת מגרש</li>
-                        <li>התאמת הנכס לדרישות הלקוח</li>
+                        <li>בניית בית פרטי בהתאמה אישית — החל מבחירת המגרש</li>
+                        <li>התאמת הבית לצורכי הלקוח</li>
                     </ul>
                 </div>
                 <div class="service-category">
                     <h3>קהילה ומשפחה</h3>
                     <ul>
-                        <li>חיפוש נכסים במרחק הליכה מבית הכנסת, בית הספר, מקום העבודה או יעדים חשובים אחרים</li>
-                        <li>בתי ספר וגני ילדים לפי גילאי הילדים וצרכי המשפחה</li>
-                        <li>בתי כנסת ומשאבים קהילתיים</li>
+                        <li>חיפוש נכסים לפי מרחק הליכה מבית כנסת מסוים, בית ספר, מקום עבודה או יעד אחר שחשוב לכם</li>
+                        <li>איתור בתי ספר וגני ילדים בהתאם לגילאי הילדים ולצורכי המשפחה</li>
+                        <li>מידע על בתי כנסת ומשאבים קהילתיים</li>
                         <li>מידע על עירוב</li>
                         <li>מסעדות, חנויות ושירותים כשרים</li>
-                        <li>היכרות עם רבנים, בתי כנסת וארגונים קהילתיים</li>
+                        <li>סיוע ביצירת קשר עם רבנים, בתי כנסת וארגונים קהילתיים</li>
                     </ul>
                 </div>
                 <div class="service-category">
                     <h3>רשת מקצועית</h3>
                     <ul>
                         <li>משכנתאות</li>
-                        <li>מימון לתושבי חוץ</li>
+                        <li>מימון לתושבי חוץ ולרוכשים זרים</li>
                         <li>ביטוח</li>
                         <li>רואי חשבון</li>
                         <li>עורכי דין</li>
                         <li>אנשי מקצוע בתחום ההגירה</li>
-                        <li>יועצי מס וכספים</li>
+                        <li>יועצי מס ופיננסים</li>
                     </ul>
                 </div>
             </div>
             <div class="services-row-2">
                 <div class="service-category">
-                    <h3>עסקים ומסחר</h3>
+                    <h3>עסקים ונדל״ן מסחרי</h3>
                     <ul>
-                        <li>הזדמנויות לרכישת עסקים</li>
+                        <li>איתור הזדמנויות לרכישת עסקים</li>
                         <li>נדל״ן מסחרי</li>
-                        <li>השכרת משרדים / חנויות / מחסנים</li>
+                        <li>שכירת משרדים, שטחי מסחר ומחסנים</li>
                         <li>הזדמנויות השקעה</li>
                     </ul>
                 </div>
                 <div class="service-category">
                     <h3>קונסיירז׳ רילוקיישן</h3>
                     <ul>
-                        <li>חברות הובלה</li>
+                        <li>שירותי הובלה</li>
                         <li>אחסון</li>
-                        <li>שילוח רכב</li>
+                        <li>שילוח כלי רכב</li>
                         <li>דיור זמני</li>
                         <li>קבלנים ומעצבים</li>
-                        <li>הקמת הבית</li>
-                        <li>שיפוץ בהתאמה לדרישות הלקוח</li>
-                        <li>חשבונות שירותים ושירותים מקומיים</li>
-                        <li>ניטור הבית</li>
-                        <li>סיוע בהתיישבות</li>
+                        <li>הכנת הבית למעבר</li>
+                        <li>שיפוץ בהתאם לצורכי הלקוח</li>
+                        <li>חיבור לחשמל, מים, אינטרנט ושירותים מקומיים</li>
+                        <li>השגחה על הנכס בהיעדרכם</li>
+                        <li>סיוע בהתאקלמות</li>
                     </ul>
                 </div>
             </div>
@@ -626,31 +622,31 @@
             <div class="section-header">
                 <div class="section-star"><svg viewBox="0 0 100 100" fill="none"><path d="M50 8 L88 72 H12 Z M50 92 L12 28 H88 Z" fill="none" stroke="#B8924A" stroke-width="2.5"/></svg></div>
                 <p class="section-label">למה דרום פלורידה</p>
-                <h2>קהילה שכבר נמצאת כאן</h2>
+                <h2>קהילה יהודית מבוססת</h2>
             </div>
             <div class="stats-grid">
                 <div class="stat-item">
-                    <div class="stat-number">+130K</div>
-                    <div class="stat-label">תושבים יהודים<br>במיאמי-דייד בלבד</div>
+                    <div class="stat-number" dir="ltr">+130,000</div>
+                    <div class="stat-label">תושבים יהודים<br>במיאמי־דייד בלבד</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">1 מ-4</div>
-                    <div class="stat-label">מבוגרים יהודים הגיעו<br>בעשור האחרון</div>
+                    <div class="stat-number">כמעט 1 מכל 4</div>
+                    <div class="stat-label">מהמבוגרים היהודים במיאמי<br>עברו לאזור בעשור האחרון</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">1 מ-3</div>
-                    <div class="stat-label">נולדו מחוץ<br>לארצות הברית</div>
+                    <div class="stat-number">1 מכל 3</div>
+                    <div class="stat-label">נולד מחוץ<br>לארצות הברית</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">41%</div>
-                    <div class="stat-label">מתלמידי K-12<br>לומדים בבתי ספר יהודיים</div>
+                    <div class="stat-number" dir="ltr">41%</div>
+                    <div class="stat-label">מהתלמידים היהודים בגילאי גן–י״ב<br>לומדים בבתי ספר יהודיים</div>
                 </div>
             </div>
             <div class="stats-lists">
                 <div class="stats-list">
-                    <h4>הקהילה היהודית</h4>
+                    <h4>החיים היהודיים בדרום פלורידה</h4>
                     <ul>
-                        <li>בתי כנסת מכל הזרמים — אורתודוקסי, מודרני אורתודוקסי, חב״ד, ספרדי, קונסרבטיבי, רפורמי</li>
+                        <li>בתי כנסת וקהילות ממגוון זרמים ומסורות — אורתודוקסיים, אורתודוקסיים מודרניים, חב״ד־ליובאוויטש, ספרדיים, קונסרבטיביים ורפורמיים</li>
                         <li>בתי ספר יהודיים וגני ילדים</li>
                         <li>ארגונים קהילתיים ומרכזי תרבות</li>
                         <li>מסעדות, שווקים ושירותים כשרים</li>
@@ -660,15 +656,15 @@
                     <h4>היתרונות של פלורידה</h4>
                     <ul>
                         <li>סביבה עסקית והשקעתית חזקה</li>
-                        <li>ללא מס הכנסה מדינתי</li>
-                        <li>אקלים חם כל השנה</li>
-                        <li>שדות תעופה בינלאומיים מרכזיים עם טיסות ישירות לצפון אמריקה, אירופה וישראל</li>
-                        <li>חקיקה מדינתית המתייחסת באופן ספציפי לאנטישמיות ומשלבת את הגדרת העבודה של IHRA</li>
-                        <li>הגבלות על השקעות מדינתיות וחוזים ממשלתיים הקשורים לחרם על ישראל</li>
+                        <li>אין מס הכנסה אישי מדינתי בפלורידה</li>
+                        <li>אקלים חם לאורך כל השנה</li>
+                        <li>נמלי תעופה בינלאומיים מרכזיים עם טיסות ישירות לצפון אמריקה, אירופה וישראל</li>
+                        <li>חקיקה מדינתית העוסקת באנטישמיות ומאמצת את הגדרת העבודה של IHRA לאנטישמיות</li>
+                        <li>הגבלות הנוגעות להשקעות מדינתיות ולהתקשרויות ממשלתיות מסוימות עם גופים המעורבים בחרם על ישראל</li>
                     </ul>
                 </div>
             </div>
-            <p class="stats-source">מקור: אוניברסיטת ברנדייס / הפדרציה היהודית של מיאמי הגדולה, 2024</p>
+            <p class="stats-source">מקור לנתוני הקהילה: אוניברסיטת ברנדייס / הפדרציה היהודית של מיאמי הגדולה, 2024</p>
         </div>
     </section>
 
@@ -679,17 +675,17 @@
                 <div class="section-star"><svg viewBox="0 0 100 100" fill="none"><path d="M50 8 L88 72 H12 Z M50 92 L12 28 H88 Z" fill="none" stroke="#B8924A" stroke-width="2.5"/></svg></div>
                 <p class="section-label">איפה אנחנו עובדים</p>
                 <h2>הכירו את האזורים</h2>
-                <p>כל אזור מציע סגנון חיים שונה — מחוף הים ועד פרברים. אנחנו עוזרים לכם למצוא את המתאים.</p>
+                <p>כל אזור מציע סגנון חיים שונה — מחיים על קו החוף ועד לסביבה פרברית. אנחנו עוזרים לכם להבין אילו אפשרויות מתאימות לצרכים ולקריטריונים שלכם.</p>
             </div>
             <div class="areas-grid">
-                <div class="area-card"><img class="area-card-bg" src="miami-beach.jpg" alt="מיאמי ביץ׳"><div class="area-card-overlay"><h3>מיאמי ביץ׳</h3><p>קהילה היסטורית, שכונות להליכה, תרבות ומסעדנות</p></div></div>
-                <div class="area-card"><img class="area-card-bg" src="bal-harbour.jpg" alt="בל הארבור"><div class="area-card-overlay"><h3>סרפסייד · בל הארבור · ביי הארבור</h3><p>מגורים על חוף הים עם תשתית יומיומית מבוססת</p></div></div>
-                <div class="area-card"><img class="area-card-bg" src="sunny-isles.jpg" alt="סאני איילס ביץ׳"><div class="area-card-overlay"><h3>סאני איילס ביץ׳</h3><p>מגדלים מול האוקיינוס וקהילה בינלאומית צומחת</p></div></div>
-                <div class="area-card"><img class="area-card-bg" src="aventura.jpg" alt="אוונטורה"><div class="area-card-overlay"><h3>אוונטורה</h3><p>מוכוונת משפחות עם בתי ספר מעולים וגישה קהילתית</p></div></div>
-                <div class="area-card"><img class="area-card-bg" src="north-miami-beach.jpg" alt="נורת׳ מיאמי ביץ׳"><div class="area-card-overlay"><h3>נורת׳ מיאמי ביץ׳</h3><p>קהילה נגישה עם אפשרויות דיור מגוונות</p></div></div>
-                <div class="area-card"><img class="area-card-bg" src="hollywood.jpg" alt="הוליווד"><div class="area-card-overlay"><h3>הוליווד והאלנדייל</h3><p>קהילה צומחת, גישה לחוף, אפשרויות במחירים נוחים</p></div></div>
-                <div class="area-card"><img class="area-card-bg" src="boca-raton.jpg" alt="בוקה רטון"><div class="area-card-overlay"><h3>בוקה רטון ודלריי</h3><p>חיים פרבריים עם בתי ספר מובילים ומוסדות מבוססים</p></div></div>
-                <div class="area-card"><img class="area-card-bg" src="palm-beach.jpg" alt="פאלם ביץ׳"><div class="area-card-overlay"><h3>פאלם ביץ׳ ווסט פאלם ביץ׳</h3><p>מגורים מפוארים על חוף הים ושכונות יוקרתיות</p></div></div>
+                <div class="area-card"><img class="area-card-bg" src="miami-beach.jpg" alt="מיאמי ביץ׳"><div class="area-card-overlay"><h3>מיאמי ביץ׳</h3><p>חיים עירוניים לצד הים, אזורים נוחים להליכה ברגל, תרבות וקולינריה</p></div></div>
+                <div class="area-card"><img class="area-card-bg" src="bal-harbour.jpg" alt="סרפסייד · בל הארבור"><div class="area-card-overlay"><h3>סרפסייד · בל הארבור · ביי הארבור איילנדס</h3><p>מגורים לצד הים וגישה נוחה לשירותים יומיומיים</p></div></div>
+                <div class="area-card"><img class="area-card-bg" src="sunny-isles.jpg" alt="סאני איילס ביץ׳"><div class="area-card-overlay"><h3>סאני איילס ביץ׳</h3><p>מגדלי מגורים על קו האוקיינוס וגישה נוחה לקניות ולשירותים</p></div></div>
+                <div class="area-card"><img class="area-card-bg" src="aventura.jpg" alt="אוונטורה"><div class="area-card-overlay"><h3>אוונטורה</h3><p>מגוון דירות ובתים, מרכזי קניות וגישה נוחה לשירותים ולבתי ספר</p></div></div>
+                <div class="area-card"><img class="area-card-bg" src="north-miami-beach.jpg" alt="נורת׳ מיאמי ביץ׳"><div class="area-card-overlay"><h3>נורת׳ מיאמי ביץ׳</h3><p>מגוון אפשרויות דיור וגישה נוחה לצירי תחבורה ולשירותים</p></div></div>
+                <div class="area-card"><img class="area-card-bg" src="hollywood.jpg" alt="הוליווד"><div class="area-card-overlay"><h3>הוליווד והאלנדייל ביץ׳</h3><p>מגוון אפשרויות דיור, גישה לחוף וקישוריות נוחה למיאמי ולפורט לודרדייל</p></div></div>
+                <div class="area-card"><img class="area-card-bg" src="boca-raton.jpg" alt="בוקה רטון"><div class="area-card-overlay"><h3>בוקה רטון ודלריי ביץ׳</h3><p>סגנון חיים פרברי, מגוון בתי ספר, שירותים ומוסדות קהילתיים</p></div></div>
+                <div class="area-card"><img class="area-card-bg" src="palm-beach.jpg" alt="פאלם ביץ׳"><div class="area-card-overlay"><h3>פאלם ביץ׳ ווסט פאלם ביץ׳</h3><p>מגורים לצד החוף, נכסי יוקרה ומגוון אפשרויות בסביבה עירונית ופרברית</p></div></div>
             </div>
         </div>
     </section>
@@ -705,17 +701,17 @@
                 <div class="step">
                     <div class="step-number">01</div>
                     <h3>ספרו לנו על המעבר</h3>
-                    <p>מאיפה אתם מגיעים, מתי אתם מתכננים להגיע, מה הכי חשוב למשפחה שלכם.</p>
+                    <p>מאיפה אתם עוברים, מתי אתם מתכננים להגיע, מה חשוב למשפחה שלכם ומהם הקריטריונים המרכזיים שלכם.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">02</div>
-                    <h3>אנחנו בונים את התוכנית</h3>
+                    <h3>אנחנו בונים עבורכם תוכנית</h3>
                     <p>תוכנית רילוקיישן מותאמת אישית הכוללת נדל״ן, קהילה, בתי ספר, אנשי מקצוע ולוגיסטיקה.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">03</div>
-                    <h3>אנחנו מלווים בכל שלב</h3>
-                    <p>מהסיור הראשון בנכס ועד יום המעבר ואחריו. ליווי שוטף מתי שתצטרכו.</p>
+                    <h3>אנחנו מלווים אתכם בכל שלב</h3>
+                    <p>מהסיור הראשון בנכס ועד יום המעבר ולאחריו — עם ליווי שוטף בהתאם לצורך.</p>
                 </div>
             </div>
         </div>
@@ -726,21 +722,21 @@
         <div class="section-inner">
             <div class="section-header">
                 <div class="section-star"><svg viewBox="0 0 100 100" fill="none"><path d="M50 8 L88 72 H12 Z M50 92 L12 28 H88 Z" fill="none" stroke="#B8924A" stroke-width="2.5"/></svg></div>
-                <p class="section-label">מה הלקוחות אומרים</p>
+                <p class="section-label">מה הלקוחות שלנו אומרים</p>
                 <h2>משפחות שעשו את המעבר</h2>
             </div>
             <div class="testimonials-grid">
                 <div class="testimonial">
-                    <p class="testimonial-text">״עברנו מטורונטו עם שני ילדים ולא ידענו מאיפה להתחיל. הם מצאו לנו בית במרחק הליכה מבית הכנסת, חיברו אותנו לבית ספר, והיו שם לאורך כל הדרך.״</p>
+                    <p class="testimonial-text">״עברנו מטורונטו עם שני ילדים ולא ידענו מאיפה להתחיל. הם מצאו לנו בית במרחק הליכה מבית הכנסת שלנו, עזרו לנו להתחבר לבית ספר וליוו אותנו לאורך כל הדרך.״</p>
                     <div class="testimonial-line"></div>
                     <p class="testimonial-author">שרה ודוד</p>
-                    <p class="testimonial-origin">Toronto → Aventura</p>
+                    <p class="testimonial-origin">מטורונטו לאוונטורה</p>
                 </div>
                 <div class="testimonial">
-                    <p class="testimonial-text">״מה שהרשים אותנו הכי זה שהם הבינו את הצרכים שלנו עוד לפני שהספקנו להסביר. כל הרילוקיישן — ממציאת השכונה הנכונה ועד הקמת הבית — טופל באופן מקצועי.״</p>
+                    <p class="testimonial-text">״מה שהרשים אותנו יותר מכל היה שהם הבינו את הצרכים שלנו עוד לפני שנדרשנו להסביר הכול. כל תהליך הרילוקיישן — ממציאת האזור המתאים ועד הכנת הבית — נוהל במקצועיות.״</p>
                     <div class="testimonial-line"></div>
                     <p class="testimonial-author">מיכאל ורחל</p>
-                    <p class="testimonial-origin">New York → Boca Raton</p>
+                    <p class="testimonial-origin">מניו יורק לבוקה רטון</p>
                 </div>
             </div>
         </div>
@@ -753,20 +749,20 @@
                 <div class="section-star"><svg viewBox="0 0 100 100" fill="none"><path d="M50 8 L88 72 H12 Z M50 92 L12 28 H88 Z" fill="none" stroke="#B8924A" stroke-width="2.5"/></svg></div>
                 <p class="section-label">הצוות שלנו</p>
                 <h2>אודותינו</h2>
-                <p>שירות רילוקיישן ונדל״ן מתמחה שנועד לעזור למשפחות לנווט מעבר לדרום פלורידה.</p>
+                <p>שירות מקצועי המתמחה ברילוקיישן ובנדל״ן, שנועד לסייע למשפחות לתכנן ולבצע מעבר לדרום פלורידה.</p>
             </div>
             <div class="about-grid">
                 <div class="about-card">
-                    <img src="alex.jpg" alt="אלכסנדר אדמוב" class="about-photo">
-                    <h3>אלכסנדר אדמוב</h3>
+                    <img src="alex.jpg" alt="Alexander Adamov" class="about-photo">
+                    <h3>Alexander Adamov</h3>
                     <p class="about-title">יועץ נדל״ן</p>
-                    <p>מתמחה בנדל״ן למגורים ומסחרי ברחבי דרום פלורידה. בעל ניסיון בעבודה עם קונים בינלאומיים ומשפחות שעוברות מקנדה, ישראל, אירופה ואמריקה הלטינית.</p>
+                    <p>מתמחה בנדל״ן למגורים ובנדל״ן מסחרי ברחבי דרום פלורידה, עם ניסיון בעבודה עם רוכשים בינלאומיים ולקוחות בתהליכי רילוקיישן.</p>
                 </div>
                 <div class="about-card">
-                    <img src="anat.jpg" alt="ענת אסקראביץ׳" class="about-photo">
-                    <h3>ענת אסקראביץ׳</h3>
+                    <img src="anat.jpg" alt="Anat Askrabic" class="about-photo">
+                    <h3>Anat Askrabic</h3>
                     <p class="about-title">יועצת נדל״ן</p>
-                    <p>מוקדשת לעזור למשפחות למצוא את הבית האידיאלי בדרום פלורידה, עם דגש על הבנת צרכי הרילוקיישן הייחודיים ודרישות הקהילה של כל לקוח.</p>
+                    <p>מסייעת למשפחות למצוא בית שמתאים לצורכיהן בדרום פלורידה, תוך התמקדות בהבנת צורכי הרילוקיישן, אורח החיים והדרישות הייחודיות של כל לקוח.</p>
                 </div>
             </div>
         </div>
@@ -779,15 +775,15 @@
                 <div class="section-star"><svg viewBox="0 0 100 100" fill="none"><path d="M50 8 L88 72 H12 Z M50 92 L12 28 H88 Z" fill="none" stroke="#B8924A" stroke-width="2.5"/></svg></div>
                 <p class="section-label">בואו נתחיל</p>
                 <h2>תכננו את המעבר</h2>
-                <p>ספרו לנו על תוכניות הרילוקיישן שלכם. ללא התחייבות — רק שיחה על איך דרום פלורידה יכולה להיראות עבור המשפחה שלכם.</p>
+                <p>ספרו לנו על תוכניות המעבר שלכם. ללא התחייבות — רק שיחה כדי להבין מה אתם מחפשים ואיך נוכל לעזור.</p>
             </div>
             <form class="relocation-form" action="mailto:adamov.real@gmail.com" method="POST" enctype="text/plain">
                 <div class="form-row">
-                    <div class="form-group"><label>שם *</label><input type="text" name="name" required placeholder="השם המלא שלכם"></div>
+                    <div class="form-group"><label>שם מלא *</label><input type="text" name="name" required placeholder="השם המלא שלכם"></div>
                     <div class="form-group"><label>אימייל *</label><input type="email" name="email" required placeholder="your@email.com" dir="ltr"></div>
                 </div>
                 <div class="form-row">
-                    <div class="form-group"><label>טלפון / וואטסאפ</label><input type="tel" name="phone" placeholder="+1 (XXX) XXX-XXXX" dir="ltr"></div>
+                    <div class="form-group"><label>טלפון / WhatsApp</label><input type="tel" name="phone" placeholder="+1 (XXX) XXX-XXXX" dir="ltr"></div>
                     <div class="form-group"><label>שפה מועדפת</label>
                         <select name="language">
                             <option value="">בחרו...</option>
@@ -799,40 +795,44 @@
                     </div>
                 </div>
                 <div class="form-row">
-                    <div class="form-group"><label>מאיפה אתם עוברים?</label><input type="text" name="origin" placeholder="עיר, מדינה, ארץ"></div>
-                    <div class="form-group"><label>תאריך מעבר צפוי</label><input type="text" name="move_date" placeholder="לדוגמה: אביב 2027, בהקדם, עדיין לא בטוחים"></div>
+                    <div class="form-group"><label>מאיפה אתם עוברים?</label><input type="text" name="origin" placeholder="עיר, מדינה / פרובינציה, ארץ"></div>
+                    <div class="form-group"><label>מועד מעבר משוער</label><input type="text" name="move_date" placeholder="לדוגמה: אביב 2027, בהקדם האפשרי, עדיין לא בטוחים"></div>
                 </div>
                 <div class="form-row">
-                    <div class="form-group"><label>קנייה / שכירות / לא בטוחים</label>
+                    <div class="form-group"><label>קנייה / שכירות / עדיין לא בטוחים</label>
                         <select name="type">
                             <option value="">בחרו...</option>
                             <option>קנייה</option>
                             <option>שכירות</option>
-                            <option>שניהם / לא בטוחים</option>
+                            <option>שניהם / עדיין לא בטוחים</option>
                         </select>
                     </div>
                     <div class="form-group"><label>טווח תקציב</label><input type="text" name="budget" placeholder="לדוגמה: $500K–$800K או $4K–$6K לחודש" dir="ltr"></div>
                 </div>
                 <div class="form-row">
-                    <div class="form-group"><label>חדרי שינה / סוג נכס</label><input type="text" name="property" placeholder="לדוגמה: 3 חדרי שינה דירה, בית צמוד קרקע"></div>
-                    <div class="form-group"><label>מבוגרים</label><input type="number" name="adults" min="1" placeholder="מספר מבוגרים"></div>
+                    <div class="form-group"><label>מספר חדרי שינה / סוג הנכס</label><input type="text" name="property" placeholder="לדוגמה: דירת 3 חדרי שינה, בית פרטי"></div>
+                    <div class="form-group"><label>מספר מבוגרים</label><input type="number" name="adults" min="1" placeholder="מספר מבוגרים"></div>
                 </div>
                 <div class="form-row">
-                    <div class="form-group"><label>ילדים וגילאים</label><input type="text" name="children" placeholder="לדוגמה: 2 ילדים (גילאי 5, 8)"></div>
-                    <div class="form-group"><label>אזורים מועדפים</label><input type="text" name="areas" placeholder="לדוגמה: אוונטורה, בוקה רטון — או עדיין לא בטוחים"></div>
+                    <div class="form-group"><label>מספר ילדים וגיליהם</label><input type="text" name="children" placeholder="לדוגמה: 2 ילדים, בגילאי 5 ו־8"></div>
+                    <div class="form-group"><label>חיות מחמד</label><input type="text" name="pets" placeholder="לדוגמה: כלב אחד / ללא חיות מחמד"></div>
                 </div>
-                <div class="form-group full"><label>בית כנסת, בית ספר, מקום עבודה או יעד אחר שתרצו להיות קרובים אליו?</label><input type="text" name="proximity" placeholder="לדוגמה: BRS בוקה רטון, Scheck Hillel, מקום עבודה ספציפי"></div>
+                <div class="form-row">
+                    <div class="form-group"><label>אזורים מועדפים</label><input type="text" name="areas" placeholder="לדוגמה: אוונטורה, בוקה רטון — או עדיין לא בטוחים"></div>
+                    <div class="form-group"><label>קרבה ליעד מסוים</label><input type="text" name="proximity" placeholder="לדוגמה: BRS בבוקה רטון, Scheck Hillel או מקום עבודה מסוים"></div>
+                </div>
                 <div class="form-group full">
                     <label>שירותים נדרשים</label>
                     <div class="checkbox-grid">
-                        <label class="checkbox-label"><input type="checkbox" name="svc" value="home"> חיפוש בית</label>
+                        <label class="checkbox-label"><input type="checkbox" name="svc" value="home"> חיפוש נכס</label>
                         <label class="checkbox-label"><input type="checkbox" name="svc" value="schools"> בתי ספר וגני ילדים</label>
                         <label class="checkbox-label"><input type="checkbox" name="svc" value="community"> בית כנסת / קהילה</label>
                         <label class="checkbox-label"><input type="checkbox" name="svc" value="mortgage"> משכנתא / מימון</label>
                         <label class="checkbox-label"><input type="checkbox" name="svc" value="immigration"> הגירה</label>
-                        <label class="checkbox-label"><input type="checkbox" name="svc" value="business"> עסקים / מסחרי</label>
+                        <label class="checkbox-label"><input type="checkbox" name="svc" value="business"> עסקים / נדל״ן מסחרי</label>
                         <label class="checkbox-label"><input type="checkbox" name="svc" value="moving"> הובלה / לוגיסטיקה</label>
-                        <label class="checkbox-label"><input type="checkbox" name="svc" value="renovation"> הקמת בית / שיפוץ</label>
+                        <label class="checkbox-label"><input type="checkbox" name="svc" value="renovation"> הכנת הבית / שיפוץ</label>
+                        <label class="checkbox-label"><input type="checkbox" name="svc" value="management"> ניהול נכס</label>
                     </div>
                 </div>
                 <div class="form-group full"><label>מידע נוסף</label><textarea name="additional" rows="4" placeholder="כל דבר נוסף שתרצו שנדע..."></textarea></div>
@@ -845,10 +845,10 @@
     <section class="cta-section">
         <div class="section-inner">
             <h2>מוכנים להתחיל?</h2>
-            <p>בין אם אתם שישה חודשים לפני או עדיין בוחנים — ללא לחץ, ללא התחייבות.</p>
+            <p>בין אם המעבר מתוכנן לעוד שישה חודשים ובין אם אתם רק מתחילים לבחון אפשרויות — ללא לחץ וללא התחייבות.</p>
             <div class="cta-buttons">
                 <a href="#contact" class="btn-primary">תכננו את המעבר</a>
-                <a href="tel:+17866951465" class="btn-outline-white">חייגו: +1 786-695-1465</a>
+                <a href="tel:+17866951465" class="btn-outline-white">התקשרו: +1 786-695-1465</a>
             </div>
         </div>
     </section>
@@ -858,8 +858,8 @@
         <div class="footer-inner">
             <div class="footer-top">
                 <div class="footer-brand-block">
-                    <div class="footer-brand">יועצי רילוקיישן יהודי לדרום פלורידה</div>
-                    <div class="footer-tagline">מהמחשבה הראשונה עד המזוזה על הדלת</div>
+                    <div class="footer-brand">South Florida Jewish Relocation Advisors</div>
+                    <div class="footer-tagline">מהמחשבה הראשונה ועד המזוזה בפתח הבית החדש</div>
                     <div class="footer-contact">
                         <a href="tel:+17866951465" dir="ltr">+1 786-695-1465</a><br>
                         <a href="mailto:adamov.real@gmail.com" dir="ltr">adamov.real@gmail.com</a>
@@ -883,15 +883,15 @@
                         <text x="24" y="34" font-size="5" fill="rgba(255,255,255,0.5)" text-anchor="middle" font-family="Inter, sans-serif" font-weight="600">EQUAL</text>
                         <text x="24" y="40" font-size="4" fill="rgba(255,255,255,0.4)" text-anchor="middle" font-family="Inter, sans-serif">HOUSING</text>
                     </svg>
-                    <span style="font-size: 11px; color: rgba(255,255,255,0.4);">דיור הוגן · הזדמנות שווה</span>
+                    <span style="font-size: 11px; color: rgba(255,255,255,0.4);">דיור הוגן · שוויון הזדמנויות</span>
                 </div>
-                <p class="footer-disclaimer">השירותים שלנו זמינים ללקוחות מכל הרקעים. איננו ממליצים על נכסים או שכונות על בסיס גזע, דת, מוצא לאומי או כל מעמד מוגן אחר. כל חיפושי הנכסים מתבצעים על בסיס קריטריונים אובייקטיביים שצוינו על ידי הלקוח, כולל תקציב, מאפייני הנכס, דרישות נסיעה וקרבה ליעדים ספציפיים.</p>
-                <p class="footer-professional">כל השירותים המשפטיים, ההגירה, המס, הפיננסיים ושירותים מקצועיים מורשים אחרים המוזכרים באתר זה ניתנים על ידי אנשי מקצוע מורשים עצמאיים בתחומם. יועצי רילוקיישן יהודי לדרום פלורידה מתווכים היכרויות בלבד ואינם מספקים שירותים אלה ישירות.</p>
-                <p class="footer-brokerage" dir="ltr" style="text-align: right;">Real estate services provided through Trybal Group LLC, a Florida-licensed brokerage. Office: 55 SW 9th St, Unit 4506, Miami, FL 33130. Alexander Adamov, Licensed Real Estate Agent, FL# SL3624624.</p>
+                <p class="footer-disclaimer">השירותים שלנו זמינים ללקוחות מכל רקע. איננו ממליצים על נכסים או אזורים על בסיס גזע, דת, מוצא לאומי או כל מאפיין מוגן אחר על פי דין. כל חיפוש נכס מתבצע על בסיס קריטריונים אובייקטיביים שמגדיר הלקוח, לרבות תקציב, מאפייני הנכס, דרישות נסיעה וקרבה ליעדים מסוימים.</p>
+                <p class="footer-professional">כל השירותים המשפטיים, שירותי ההגירה, המס, הפיננסים ושירותים מקצועיים אחרים המחייבים רישוי, המוזכרים באתר זה, ניתנים על ידי אנשי מקצוע עצמאיים ומורשים בתחומם. אנו מסייעים ביצירת הקשר בלבד ואיננו מספקים שירותים אלה בעצמנו.</p>
+                <p class="footer-brokerage">שירותי התיווך בנדל״ן ניתנים באמצעות <span dir="ltr">Trybal Group LLC</span>, חברת תיווך נדל״ן מורשית במדינת פלורידה.<br>משרד: <span dir="ltr">55 SW 9th St, Unit 4506, Miami, FL 33130</span>.<br><span dir="ltr">Alexander Adamov</span>, סוכן נדל״ן מורשה, רישיון פלורידה מס׳ <span dir="ltr">SL3624624</span>.</p>
             </div>
 
             <div class="footer-bottom">
-                © 2026 יועצי רילוקיישן יהודי לדרום פלורידה · <a href="privacy.html">מדיניות פרטיות</a>
+                © 2026 South Florida Jewish Relocation Advisors · <a href="privacy.html">מדיניות פרטיות</a>
             </div>
         </div>
     </footer>
