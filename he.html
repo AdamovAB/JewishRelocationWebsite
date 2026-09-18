@@ -93,13 +93,14 @@
             display: block; width: 22px; height: 1.5px;
             background: var(--blue); margin: 5px 0; transition: 0.3s;
         }
-        .lang-switch {
+        .lang-btn {
             font-size: 12px; color: var(--text-muted);
             text-decoration: none; font-weight: 500;
-            border: 1px solid var(--border); padding: 4px 10px;
+            border: 1px solid var(--border); padding: 4px 12px;
             border-radius: 3px; transition: all 0.2s;
+            margin-right: 4px;
         }
-        .lang-switch:hover { color: var(--blue); border-color: var(--blue); }
+        .lang-btn:hover { color: var(--blue); border-color: var(--blue); }
 
         /* ===== HERO ===== */
         .hero {
@@ -510,13 +511,13 @@
                 </div>
             </a>
             <ul class="nav-links" id="navLinks">
-                <li><a href="index.html" class="lang-switch">English</a></li>
                 <li><a href="#services" onclick="closeMenu()">שירותים</a></li>
                 <li><a href="#areas" onclick="closeMenu()">אזורים</a></li>
                 <li><a href="#why-florida" onclick="closeMenu()">למה דרום פלורידה</a></li>
                 <li><a href="#about" onclick="closeMenu()">אודות</a></li>
                 <li><a href="#contact" class="nav-cta" onclick="closeMenu()">תכננו את המעבר</a></li>
             </ul>
+            <a href="index.html" class="lang-btn">English</a>
             <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('active')" aria-label="תפריט">
                 <span></span><span></span><span></span>
             </button>
