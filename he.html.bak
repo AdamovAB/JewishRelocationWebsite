@@ -534,7 +534,7 @@
                 <svg style="width:18px;height:18px;opacity:0.5;" viewBox="0 0 100 100" fill="none"><path d="M50 8 L88 72 H12 Z M50 92 L12 28 H88 Z" fill="none" stroke="#B8924A" stroke-width="4"/></svg>
             </p>
             <h1>המשפחה שלכם.<br>הקהילה שלכם.<br>הבית החדש שלכם בדרום&nbsp;פלורידה.</h1>
-            <p class="hero-sub">ליווי מקצועי בנדל״ן וברילוקיישן למשפחות שעוברות לדרום פלורידה — ממציאת הבית הנכון בקרבת המקומות החשובים לכם, דרך בתי ספר וחיבור לקהילה ועד אנשי מקצוע, לוגיסטיקה והתאקלמות. אנחנו מלווים אתכם בשני הצדדים של המעבר — מכירת הבית הנוכחי ומציאת הבית החדש בדרום פלורידה.</p>
+            <p class="hero-sub">ליווי מקצועי בנדל״ן וברילוקיישן למשפחות שעוברות לדרום פלורידה — ממציאת הבית הנכון בקרבת המקומות החשובים לכם, דרך בתי ספר וחיבור לקהילה ועד אנשי מקצוע, לוגיסטיקה והתאקלמות.</p>
             <div class="hero-buttons">
                 <a href="#contact" class="btn-primary">תכננו את המעבר</a>
                 <a href="tel:+17866951465" class="btn-secondary">+1 786-695-1465</a>
@@ -561,7 +561,6 @@
                         <li>ניהול נכסים</li>
                         <li>בניית בית פרטי בהתאמה אישית — החל מבחירת המגרש</li>
                         <li>התאמת הבית לצורכי הלקוח</li>
-                        <li><strong>מכירת הבית הנוכחי שלכם</strong> — עוברים ממדינה אחרת בארה״ב או מחו״ל? נוכל לחבר אתכם לאיש מקצוע מקומי בתחום הנדל״ן שיסייע במכירת הבית הנוכחי ולתאם את התהליך עם המעבר שלכם לדרום פלורידה.</li>
                     </ul>
                 </div>
                 <div class="service-category">
@@ -834,7 +833,6 @@
                         <label class="checkbox-label"><input type="checkbox" name="svc" value="moving"> הובלה / לוגיסטיקה</label>
                         <label class="checkbox-label"><input type="checkbox" name="svc" value="renovation"> הכנת הבית / שיפוץ</label>
                         <label class="checkbox-label"><input type="checkbox" name="svc" value="management"> ניהול נכס</label>
-                        <label class="checkbox-label"><input type="checkbox" name="svc" value="sell_home"> מכירת הבית הנוכחי</label>
                     </div>
                 </div>
                 <div class="form-group full"><label>מידע נוסף</label><textarea name="additional" rows="4" placeholder="כל דבר נוסף שתרצו שנדע..."></textarea></div>
