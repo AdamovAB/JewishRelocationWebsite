@@ -418,6 +418,19 @@
             cursor: pointer; transition: background 0.2s; margin-top: 8px;
         }
         .btn-submit:hover { background: var(--blue-mid); }
+        .form-divider {
+            display: flex; align-items: center; gap: 16px;
+            margin: 32px 0 28px; color: var(--text-muted);
+        }
+        .form-divider::before, .form-divider::after {
+            content: ''; flex: 1; height: 1px;
+            background: var(--border);
+        }
+        .form-divider span {
+            font-size: 12px; font-weight: 500;
+            letter-spacing: 0.5px; white-space: nowrap;
+            color: var(--text-muted);
+        }
 
         /* ===== CTA ===== */
         .cta-section {
@@ -837,12 +850,20 @@
                 <p>Tell us about your relocation plans. No obligation — just a conversation about what South Florida could look like for your family.</p>
             </div>
             <form class="relocation-form" action="mailto:adamov.real@gmail.com" method="POST" enctype="text/plain">
+                <!-- Required fields -->
                 <div class="form-row">
                     <div class="form-group"><label>Name *</label><input type="text" name="name" required placeholder="Your full name"></div>
                     <div class="form-group"><label>Email *</label><input type="email" name="email" required placeholder="your@email.com"></div>
                 </div>
                 <div class="form-row">
-                    <div class="form-group"><label>Phone / WhatsApp</label><input type="tel" name="phone" placeholder="+1 (XXX) XXX-XXXX"></div>
+                    <div class="form-group"><label>Phone / WhatsApp *</label><input type="tel" name="phone" required placeholder="+1 (XXX) XXX-XXXX"></div>
+                </div>
+                <button type="submit" class="btn-submit">Start Planning Your Move</button>
+
+                <!-- Optional section -->
+                <div class="form-divider"><span>Tell us more about your move (optional)</span></div>
+
+                <div class="form-row">
                     <div class="form-group"><label>Preferred language</label>
                         <select name="language">
                             <option value="">Select...</option>
@@ -852,12 +873,10 @@
                             <option>Russian</option>
                         </select>
                     </div>
-                </div>
-                <div class="form-row">
                     <div class="form-group"><label>Where are you moving from?</label><input type="text" name="origin" placeholder="City, State/Province, Country"></div>
-                    <div class="form-group"><label>Expected move date</label><input type="text" name="move_date" placeholder="e.g. Spring 2027, ASAP, Not sure"></div>
                 </div>
                 <div class="form-row">
+                    <div class="form-group"><label>Expected move date</label><input type="text" name="move_date" placeholder="e.g. Spring 2027, ASAP, Not sure"></div>
                     <div class="form-group"><label>Buy / Rent / Not Sure</label>
                         <select name="type">
                             <option value="">Select...</option>
@@ -866,17 +885,19 @@
                             <option>Both / Not sure</option>
                         </select>
                     </div>
+                </div>
+                <div class="form-row">
                     <div class="form-group"><label>Budget range</label><input type="text" name="budget" placeholder="e.g. $500K–$800K or $4K–$6K/mo"></div>
-                </div>
-                <div class="form-row">
                     <div class="form-group"><label>Bedrooms / Property type</label><input type="text" name="property" placeholder="e.g. 3BR condo, Single family home"></div>
-                    <div class="form-group"><label>Adults</label><input type="number" name="adults" min="1" placeholder="Number of adults"></div>
                 </div>
                 <div class="form-row">
+                    <div class="form-group"><label>Adults</label><input type="number" name="adults" min="1" placeholder="Number of adults"></div>
                     <div class="form-group"><label>Children &amp; ages</label><input type="text" name="children" placeholder="e.g. 2 children (ages 5, 8)"></div>
-                    <div class="form-group"><label>Preferred areas</label><input type="text" name="areas" placeholder="e.g. Aventura, Boca Raton — or Not sure yet"></div>
                 </div>
-                <div class="form-group full"><label>Specific synagogue, school, workplace or other destination you'd like to be near?</label><input type="text" name="proximity" placeholder="e.g. BRS Boca Raton, Scheck Hillel, specific workplace"></div>
+                <div class="form-row">
+                    <div class="form-group"><label>Preferred areas</label><input type="text" name="areas" placeholder="e.g. Aventura, Boca Raton — or Not sure yet"></div>
+                    <div class="form-group"><label>Proximity to</label><input type="text" name="proximity" placeholder="e.g. BRS Boca Raton, Scheck Hillel, workplace"></div>
+                </div>
                 <div class="form-group full">
                     <label>Services needed</label>
                     <div class="checkbox-grid">

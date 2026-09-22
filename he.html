@@ -385,6 +385,19 @@
             margin-top: 24px; transition: background 0.2s;
         }
         .btn-submit:hover { background: var(--blue-mid); }
+        .form-divider {
+            display: flex; align-items: center; gap: 16px;
+            margin: 32px 0 28px; color: var(--text-muted);
+        }
+        .form-divider::before, .form-divider::after {
+            content: ''; flex: 1; height: 1px;
+            background: var(--border);
+        }
+        .form-divider span {
+            font-size: 12px; font-weight: 500;
+            letter-spacing: 0.5px; white-space: nowrap;
+            color: var(--text-muted);
+        }
 
         /* ===== CTA ===== */
         .cta-section {
@@ -779,12 +792,20 @@
                 <p>ספרו לנו על תוכניות המעבר שלכם. ללא התחייבות — רק שיחה כדי להבין מה אתם מחפשים ואיך נוכל לעזור.</p>
             </div>
             <form class="relocation-form" action="mailto:adamov.real@gmail.com" method="POST" enctype="text/plain">
+                <!-- Required fields -->
                 <div class="form-row">
                     <div class="form-group"><label>שם מלא *</label><input type="text" name="name" required placeholder="השם המלא שלכם"></div>
                     <div class="form-group"><label>אימייל *</label><input type="email" name="email" required placeholder="your@email.com" dir="ltr"></div>
                 </div>
                 <div class="form-row">
-                    <div class="form-group"><label>טלפון / WhatsApp</label><input type="tel" name="phone" placeholder="+1 (XXX) XXX-XXXX" dir="ltr"></div>
+                    <div class="form-group"><label>טלפון / WhatsApp *</label><input type="tel" name="phone" required placeholder="+1 (XXX) XXX-XXXX" dir="ltr"></div>
+                </div>
+                <button type="submit" class="btn-submit">התחילו לתכנן את המעבר</button>
+
+                <!-- Optional section -->
+                <div class="form-divider"><span>ספרו לנו עוד על המעבר (לא חובה)</span></div>
+
+                <div class="form-row">
                     <div class="form-group"><label>שפה מועדפת</label>
                         <select name="language">
                             <option value="">בחרו...</option>
@@ -794,12 +815,10 @@
                             <option>רוסית</option>
                         </select>
                     </div>
-                </div>
-                <div class="form-row">
                     <div class="form-group"><label>מאיפה אתם עוברים?</label><input type="text" name="origin" placeholder="עיר, מדינה / פרובינציה, ארץ"></div>
-                    <div class="form-group"><label>מועד מעבר משוער</label><input type="text" name="move_date" placeholder="לדוגמה: אביב 2027, בהקדם האפשרי, עדיין לא בטוחים"></div>
                 </div>
                 <div class="form-row">
+                    <div class="form-group"><label>מועד מעבר משוער</label><input type="text" name="move_date" placeholder="לדוגמה: אביב 2027, בהקדם האפשרי, עדיין לא בטוחים"></div>
                     <div class="form-group"><label>קנייה / שכירות / עדיין לא בטוחים</label>
                         <select name="type">
                             <option value="">בחרו...</option>
@@ -808,20 +827,20 @@
                             <option>שניהם / עדיין לא בטוחים</option>
                         </select>
                     </div>
+                </div>
+                <div class="form-row">
                     <div class="form-group"><label>טווח תקציב</label><input type="text" name="budget" placeholder="לדוגמה: $500K–$800K או $4K–$6K לחודש" dir="ltr"></div>
-                </div>
-                <div class="form-row">
                     <div class="form-group"><label>מספר חדרי שינה / סוג הנכס</label><input type="text" name="property" placeholder="לדוגמה: דירת 3 חדרי שינה, בית פרטי"></div>
+                </div>
+                <div class="form-row">
                     <div class="form-group"><label>מספר מבוגרים</label><input type="number" name="adults" min="1" placeholder="מספר מבוגרים"></div>
-                </div>
-                <div class="form-row">
                     <div class="form-group"><label>מספר ילדים וגיליהם</label><input type="text" name="children" placeholder="לדוגמה: 2 ילדים, בגילאי 5 ו־8"></div>
-                    <div class="form-group"><label>חיות מחמד</label><input type="text" name="pets" placeholder="לדוגמה: כלב אחד / ללא חיות מחמד"></div>
                 </div>
                 <div class="form-row">
+                    <div class="form-group"><label>חיות מחמד</label><input type="text" name="pets" placeholder="לדוגמה: כלב אחד / ללא חיות מחמד"></div>
                     <div class="form-group"><label>אזורים מועדפים</label><input type="text" name="areas" placeholder="לדוגמה: אוונטורה, בוקה רטון — או עדיין לא בטוחים"></div>
-                    <div class="form-group"><label>קרבה ליעד מסוים</label><input type="text" name="proximity" placeholder="לדוגמה: BRS בבוקה רטון, Scheck Hillel או מקום עבודה מסוים"></div>
                 </div>
+                <div class="form-group full"><label>קרבה ליעד מסוים</label><input type="text" name="proximity" placeholder="לדוגמה: BRS בבוקה רטון, Scheck Hillel או מקום עבודה מסוים"></div>
                 <div class="form-group full">
                     <label>שירותים נדרשים</label>
                     <div class="checkbox-grid">
